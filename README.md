@@ -93,7 +93,7 @@ Clone the repo
 git clone https://github.com/softsys4ai/Reval.git
 ```
 
-Run `catkin build` on the root directory
+Run `catkin build` on the `husky_ws` directory
 ```sh
 cd Reval/husky_ws
 ```
