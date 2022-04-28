@@ -83,10 +83,16 @@ source ~/.bashrc
 ```
 
 ## Building Reval
+Source your ROS setup.sh file
+```sh
+source /opt/ros/meloduc/setup.bash
+```
+
 Clone the repo 
 ```sh
 git clone https://github.com/softsys4ai/Reval.git
 ```
+
 Run `catkin build` on the root directory
 ```sh
 cd Reval/husky_ws
