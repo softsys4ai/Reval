@@ -54,7 +54,7 @@ cost_scaling_factor_g = 10
 ```
 
 ### To change the Goal location
-Update the coordinates with your goal location
+Update the coordinates with your goal location on the `goal.py` file located at `husky_ws/data_log`
 ```python
 goal = MoveBaseGoal()
 goal.target_pose.header.frame_id = 'odom' 
