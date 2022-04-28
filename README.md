@@ -99,7 +99,7 @@ git clone https://github.com/softsys4ai/Reval.git
 ```
 Run `catkin build` on the root directory
 ```sh
-cd husky_ws
+cd Reval/husky_ws
 ```
 ```sh
 catkin build
