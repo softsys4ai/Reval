@@ -100,6 +100,9 @@ cd Reval/husky_ws
 ```sh
 catkin build
 ```
+![catkin build](images/catkin build.png)
+
+
 ## Running Reval
 source your new `setup.sh` file. You need source this `setup.sh` file everytime you open a new Terminal
 ```sh
