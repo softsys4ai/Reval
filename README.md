@@ -73,9 +73,6 @@ mv ros_readbagfile.py ~/bin/ros_readbagfile
 ```
 Create a symlink in `~/bin` to this script so you can run it from anywhere:
 ```sh
-ln -si "${PWD}/ros_readbagfile.py" ~/bin/gs_ros_readbagfile
-```
-```sh
 ln -si "${PWD}/ros_readbagfile.py" ~/bin/ros_readbagfile
 ```
 If this is the first time ever creating the "~/bin" dir, then log out and log back in to your Ubuntu user account to cause Ubuntu to automatically add your ~/bin dir to your executable PATH.
@@ -84,16 +81,6 @@ Re-source your `~/.bahsrc` file
 ```sh
 source ~/.bashrc
 ```
-
-Install python dependencies
-```sh
-pip install bagpy
-```
-For python3
-```sh
-pip3 install bagpy
-```
-if the above cmd ultimately fails due to permissions errors, use `sudo` to: `sudo pip3 install bagpy`
 
 ## Building Reval
 Clone the repo 
