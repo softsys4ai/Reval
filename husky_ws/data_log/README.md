@@ -52,3 +52,17 @@ cost_scaling_factor_g = 10
   </include>
 </launch>
 ```
+
+### To change the Goal location
+Update the coordinates with your goal location
+```python
+goal = MoveBaseGoal()
+goal.target_pose.header.frame_id = 'odom' 
+
+# Update the coordinates with your goal location
+goal.target_pose.pose.position.x = 14.5426712036
+goal.target_pose.pose.position.y = -0.691165924072
+goal.target_pose.pose.orientation.z = -0.0198330671035
+goal.target_pose.pose.orientation.w = 0.99980330538
+```
+
