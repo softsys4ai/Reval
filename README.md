@@ -1,3 +1,19 @@
+# Reval
+Reval is an open-source framework to evaluate the performace of Robotics platforms. Currently it only supports [Husky platform](https://clearpathrobotics.com/husky-unmanned-ground-vehicle-robot/). The useres can evalute the performance of a mission for a given gazebo envirnoment (or on their own gazebo envirnment) for different configurations in an automated fashion and log the results. Reveal records the [rosbag](http://wiki.ros.org/rosbag) and evalutes all ros topics from the rosbag file. In addition, Reval supports the following metrics to evaluate the quality of mission:
+
+**Evaluation metrics**
+* number of failed produced path by DWA planner
+* number of re-planning by DWA planner
+* number of recovery behaviour executed 
+* distance traveled
+* mission time
+* mission success: checks if the robot chead the goal
+
+To define your custom configuration values: [Set Configuration](https://github.com/softsys4ai/Reval/tree/master/husky_ws/data_log)
+
+To use can custom gazebo environment: [Use custom gazebo environment](https://github.com/softsys4ai/Reval/tree/master/husky_ws/data_log)
+
+
 ## Requirements
 * Ubuntu 18 or Ubuntu 20
 * [ROS Melodic](http://wiki.ros.org/melodic/Installation/Ubuntu) or [ROS Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu) 
