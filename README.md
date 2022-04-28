@@ -13,6 +13,8 @@ To define your custom configuration values: [Set Configuration](https://github.c
 
 To use can custom gazebo environment: [Use custom gazebo environment](https://github.com/softsys4ai/Reval/tree/master/husky_ws/data_log)
 
+To change tge gola location: [Update Goal location](https://github.com/softsys4ai/Reval/tree/master/husky_ws/data_log)
+
 
 ## Requirements
 * Ubuntu 18 or Ubuntu 20
