@@ -13,7 +13,7 @@ To define your custom configuration values: [Set Configuration](https://github.c
 
 To use can custom gazebo environment: [Use custom gazebo environment](https://github.com/softsys4ai/Reval/tree/master/husky_ws/data_log)
 
-To change tge gola location: [Update Goal location](https://github.com/softsys4ai/Reval/tree/master/husky_ws/data_log)
+To change the gola location: [Update Goal location](https://github.com/softsys4ai/Reval/tree/master/husky_ws/data_log)
 
 Reval supports both the [Husky simulator](https://www.clearpathrobotics.com/assets/guides/melodic/husky/SimulatingHusky.html) and Hysky physical robot. The instructions provided below are for Husky simulator. To run Reval on the physical Husky, first setup your husky using [Husky UGV Tutorial](https://www.clearpathrobotics.com/assets/guides/melodic/husky/BackUpHusky.html) then follow the below instructions.
 
