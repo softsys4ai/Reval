@@ -100,7 +100,7 @@ cd Reval/husky_ws
 ```sh
 catkin build
 ```
-![catkin build](images/catkin build.png)
+![catkin build](images/catkin_build.png)
 
 
 ## Running Reval
