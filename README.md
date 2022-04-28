@@ -97,4 +97,4 @@ To evaluate the mission run
 ```sh
 ./run.sh
 ```
-
+If you setup everything correctly, you should see the `Evaluation_results.csv` file on the `data_log` directory 
