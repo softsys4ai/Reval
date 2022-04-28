@@ -102,7 +102,7 @@ catkin build
 ```
 If everything is correct, you should see something similar to the following output
 
-<img src="images/catkin_build.png" width=450 height=300>
+![catkin_build](https://user-images.githubusercontent.com/73362969/165857662-dd52c4d0-8a00-45f3-bdfc-1ceb9c9bde62.jpg)
 
 
 ## Running Reval
@@ -115,3 +115,10 @@ To evaluate the mission run
 ./run.sh
 ```
 If you setup everything correctly, you should see the `Evaluation_results.csv` file on the `data_log` directory 
+
+### Demo
+https://user-images.githubusercontent.com/73362969/165857790-90e514c7-1972-472c-9764-9b4b5e79c990.mp4
+
+
+
+
