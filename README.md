@@ -85,7 +85,7 @@ source ~/.bashrc
 ## Building Reval
 Source your ROS setup.sh file
 ```sh
-source /opt/ros/meloduc/setup.bash
+source /opt/ros/<ros distro>/setup.bash
 ```
 
 Clone the repo 
