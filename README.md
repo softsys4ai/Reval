@@ -100,7 +100,9 @@ cd Reval/husky_ws
 ```sh
 catkin build
 ```
-<img src="images/catkin_build.png" width=250 height=250>
+If everything is correct, you should see something similar to the following output
+
+<img src="images/catkin_build.png" width=400 height=250>
 
 
 ## Running Reval
