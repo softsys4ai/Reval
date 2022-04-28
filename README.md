@@ -102,7 +102,7 @@ catkin build
 ```
 If everything is correct, you should see something similar to the following output
 
-<img src="images/catkin_build.png" width=400 height=250>
+<img src="images/catkin_build.png" width=450 height=300>
 
 
 ## Running Reval
