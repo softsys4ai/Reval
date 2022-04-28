@@ -106,6 +106,9 @@ If everything is correct, you should see something similar to the following outp
 
 
 ## Running Reval
+```sh
+cd Reval/husky_ws
+```
 source your new `setup.sh` file. You need source this `setup.sh` file everytime you open a new Terminal
 ```sh
 source devel/setup.bash
