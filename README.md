@@ -120,8 +120,8 @@ To evaluate the mission run
 If you setup everything correctly, you should see the `Evaluation_results.csv` file on the `data_log` directory 
 
 ### Demo
-<!--- https://user-images.githubusercontent.com/73362969/165874997-e870c4e2-95df-4af5-a5cd-c2d3f6d4935e.mp4 --->
-![Reval_demo](https://user-images.githubusercontent.com/73362969/165876695-b7e5689d-415a-4e58-8208-3ba4116a1229.gif)
+https://user-images.githubusercontent.com/73362969/165874997-e870c4e2-95df-4af5-a5cd-c2d3f6d4935e.mp4
+
 
 
 
