@@ -1,4 +1,4 @@
-This directory is similar to [Clear Path Robotics Husky](https://github.com/husky/husky)
+This directory is similar to [Clearpath Robotics Husky](https://github.com/husky/husky)
 
 
 husky
