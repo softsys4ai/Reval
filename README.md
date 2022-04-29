@@ -9,11 +9,11 @@ Reval is an open-source framework to evaluate the performace of Robotics platfor
 * mission time
 * mission success: checks if the robot chead the goal
 
-To define your custom configuration values: [Set Configuration](https://github.com/softsys4ai/Reval/tree/master/husky_ws/data_log)
+To define your custom configuration values: [Set Configuration](/husky_ws/data_log/README.md#cahnging-configuration-values)
 
-To use can custom gazebo environment: [Use custom gazebo environment](https://github.com/softsys4ai/Reval/tree/master/husky_ws/data_log)
+To use can custom gazebo environment: [Use custom gazebo environment](/husky_ws/data_log/README.md#to-use-your-custom-map)
 
-To change the gola location: [Update Goal location](https://github.com/softsys4ai/Reval/tree/master/husky_ws/data_log)
+To change the gola location: [Update Goal location](/husky_ws/data_log/README.md#to-change-the-goal-location)
 
 Reval supports both the [Husky simulator](https://www.clearpathrobotics.com/assets/guides/melodic/husky/SimulatingHusky.html) and Hysky physical robot. The instructions provided below are for Husky simulator. To run Reval on the physical Husky, first setup your husky using [Husky UGV Tutorial](https://www.clearpathrobotics.com/assets/guides/melodic/husky/BackUpHusky.html) then follow the below instructions.
 
