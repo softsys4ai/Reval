@@ -1,3 +1,6 @@
+This directory is similar to [Clear Path Robotics Husky](https://github.com/husky/husky)
+
+
 husky
 =====
 
