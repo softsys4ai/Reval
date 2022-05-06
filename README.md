@@ -82,7 +82,13 @@ Re-source your `~/.bahsrc` file
 ```sh
 source ~/.bashrc
 ```
-
+## Install dependencies
+```sh
+sudo apt install ripgrep
+pip install pandas
+pip install tqdm
+pip install tabulate 
+```
 ## Building Reval
 Source your ROS setup.sh file
 ```sh
@@ -94,9 +100,9 @@ Clone the repo
 git clone https://github.com/softsys4ai/Reval.git
 ```
 
-Run `catkin build` on the `husky_ws` directory
+Run `catkin build` on the `Reval root` directory
 ```sh
-cd Reval/husky_ws
+cd Reval/
 ```
 ```sh
 catkin build
@@ -108,7 +114,7 @@ If everything is correct, you should see something similar to the following outp
 
 ## Running Reval
 ```sh
-cd Reval/husky_ws
+cd Reval/
 ```
 source your new `setup.sh` file. You need source this `setup.sh` file everytime you open a new Terminal
 ```sh
@@ -116,9 +122,16 @@ source devel/setup.bash
 ```
 To evaluate the mission run
 ```sh
-./run.sh
+python reval.py
 ```
-If you setup everything correctly, you should see the `Evaluation_results.csv` file on the `data_log` directory 
+
+```
+optional arguments:
+  -h, --help    show this help message and exit
+  -v , -viz     turn on/off visualization of gazebo and rviz (default: True)
+  -e , -epoch   number of data-points to be recorded (default: 1)
+```
+examaple: `python reval.py -v false -d 10` 
 
 ### Demo
 https://user-images.githubusercontent.com/73362969/165874997-e870c4e2-95df-4af5-a5cd-c2d3f6d4935e.mp4
