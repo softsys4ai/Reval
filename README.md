@@ -21,8 +21,6 @@ Reval supports both the [Husky simulator](https://www.clearpathrobotics.com/asse
 * Ubuntu 18 or Ubuntu 20
 * [ROS Melodic](http://wiki.ros.org/melodic/Installation/Ubuntu) or [ROS Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu) 
 * Python 2.7 (for ROS Melodic), Python 3.6+ (for ROS Noetic)
-* [Pandas 1.4+](https://pypi.org/project/pandas/)
-* ripgrep (`sudo apt install ripgrep`)
 
 ## Installations
 ### Installing the [husky simulator](https://www.clearpathrobotics.com/assets/guides/melodic/husky/SimulatingHusky.html)
