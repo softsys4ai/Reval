@@ -3,4 +3,13 @@
        husky.urdf.xacro. If a robot is being customized and requires
        additional URDF, set the HUSKY_URDF_EXTRAS environment variable
        to the full path of the file you would like included. -->
+  <gazebo>
+    <plugin name="gazebo_ros_bumper_controller" filename="libgazebo_ros_bumper.so">
+      <alwaysOn>true</alwaysOn>
+      <updateRate>1000.0</updateRate>
+      <bumperTopicName>husky_bumper</bumperTopicName>
+      <frameName>world</frameName>
+    </plugin>
+  </gazebo>
+
 </robot>

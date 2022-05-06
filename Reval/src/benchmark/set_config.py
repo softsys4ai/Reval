@@ -43,7 +43,7 @@ df = pd.DataFrame({"cost_scaling_factor_g":[cost_scaling_factor_g],
                 "path_distance_bias":[path_distance_bias],"goal_distance_bias":[goal_distance_bias],"stop_time_buffer":[stop_time_buffer],
                 "occdist_scale":[occdist_scale],"yaw_goal_tolerance":[yaw_goal_tolerance],"xy_goal_tolerance":[xy_goal_tolerance],
                 "min_vel_x":min_vel_x})
-df.to_csv("configs.csv", index=False)     
+df.to_csv("log/configs.csv", index=False)     
 
 
 mb_global_costmap_inf_params = {'cost_scaling_factor':cost_scaling_factor_g}
@@ -63,17 +63,17 @@ mb_DWAPlanner_params = {'path_distance_bias':path_distance_bias,'goal_distance_b
 
 
 
-print("move_base_global_inflation: " + str(mb_global_costmap_inf_params))
-print("move_base_global: " + str(mb_global_costmap_params))
-print("move_base_global_obstacles: " + str(mb_global_costmap_obs_params))
+# print("move_base_global_inflation: " + str(mb_global_costmap_inf_params))
+# print("move_base_global: " + str(mb_global_costmap_params))
+# print("move_base_global_obstacles: " + str(mb_global_costmap_obs_params))
 
 
-print("move_base_local_inflation: " + str(mb_local_costmap_inf_params))
-print("move_base_local: " + str(mb_local_costmap_params))
-print("move_base_local_obstacles: " + str(mb_local_costmap_obs_params))
+# print("move_base_local_inflation: " + str(mb_local_costmap_inf_params))
+# print("move_base_local: " + str(mb_local_costmap_params))
+# print("move_base_local_obstacles: " + str(mb_local_costmap_obs_params))
 
-print("move_base DWAPlanner: " + str(mb_DWAPlanner_params))
-print("--------------------")
+# print("move_base DWAPlanner: " + str(mb_DWAPlanner_params))
+# print("--------------------")
 
 
 

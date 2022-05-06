@@ -2,13 +2,8 @@
 
 import math
 import roslib, rospy
-#from geometry_msgs.msg import PoseWithCovarianceStamped
-#from geometry_msgs.msg import PoseStamped
 from move_base_msgs.msg import MoveBaseActionGoal
 from move_base_msgs.msg import MoveBaseActionFeedback
-#from actionlib_msgs.msg import GoalID
-#import sys
-#import os
       
 pose_subscriber = None
 goal_subscriber = None
@@ -53,7 +48,7 @@ def addPointToTotalDistance(current_point):
         prev_x = x
         prev_y = y
         print("Current distance traveled= " + str(total_distance) + " meters")
-        with open('traveled distance.txt', 'w') as f:
+        with open('log/traveled distance.txt', 'w') as f:
             f.write(str(total_distance))
             f.close()
         if goal_point != []:
