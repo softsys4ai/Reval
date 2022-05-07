@@ -43,19 +43,19 @@ def addPointToTotalDistance(current_point):
         x = current_point.feedback.base_position.pose.position.x
         y = current_point.feedback.base_position.pose.position.y
 
-        total_distance += round(distancePoints(x, y, prev_x, prev_y),2)
+        total_distance += distancePoints(x, y, prev_x, prev_y)
 
         prev_x = x
         prev_y = y
-        print("Current distance traveled= " + str(total_distance) + " meters")
+        print("Current distance traveled= ", round(total_distance, 2), " meters")
         with open('log/traveled distance.txt', 'w') as f:
-            f.write(str(total_distance))
+            f.write(str(round(total_distance, 2)))
             f.close()
-        if goal_point != []:
-            if distancePoints(x, y, goal_point.goal.target_pose.pose.position.x, goal_point.goal.target_pose.pose.position.y) <= 0.1:
-                pose_subscriber.unregister()
-                print("Total Distance = " + str(total_distance) + " meters")
-                print("Press Ctrl+C to exit.")
+        # if goal_point != []:
+        #     if distancePoints(x, y, goal_point.goal.target_pose.pose.position.x, goal_point.goal.target_pose.pose.position.y) <= 0.1:
+        #         pose_subscriber.unregister()
+        #         print("Total Distance = ", total_distance, " meters")
+        #         print("Press Ctrl+C to exit.")
 
 
 if __name__ == '__main__':

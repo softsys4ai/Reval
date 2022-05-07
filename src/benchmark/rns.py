@@ -4,7 +4,7 @@ from goals import *
 
 def rns(currPose, target):
     RNS = 0
-    with open('log/rns', 'a+') as fp:
+    with open('log/rns', 'ab+') as fp:
         if currPose >= (target-0.6):
             RNS += 1
             pickle.dump(RNS,fp)
@@ -29,3 +29,9 @@ def CalcRns():
 
 def ResetRNS():
     os.remove("log/rns")  
+
+
+rns(2,3)
+CalcRns()
+
+ResetRNS()

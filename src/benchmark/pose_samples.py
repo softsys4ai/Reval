@@ -14,10 +14,10 @@ def callback(msg):
     return x_samples, y_samples
 
 def StoreSamples():
-    with open('log/x_samples.ob', 'w') as fp:
+    with open('log/x_samples.ob', 'wb') as fp:
         pickle.dump(x_samples, fp)
         fp.close()  
-    with open('log/y_samples.ob', 'w') as fp:
+    with open('log/y_samples.ob', 'wb') as fp:
         pickle.dump(y_samples, fp)
         fp.close()  
 

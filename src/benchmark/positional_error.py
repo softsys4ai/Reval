@@ -20,16 +20,16 @@ def PosError(goal_x, goal_y):
     act_pose_x.append(goal_x)
     act_pose_y.append(goal_y)
 
-    with open('log/curr_pose_x.ob', 'w') as fp:
+    with open('log/curr_pose_x.ob', 'wb') as fp:
         pickle.dump(curr_pose_x, fp)
         fp.close()  
-    with open('log/curr_pose_y.ob', 'w') as fp:
+    with open('log/curr_pose_y.ob', 'wb') as fp:
         pickle.dump(curr_pose_y, fp)
         fp.close()   
-    with open('log/act_pose_x.ob', 'w') as fp:
+    with open('log/act_pose_x.ob', 'wb') as fp:
         pickle.dump(act_pose_x, fp)
         fp.close()  
-    with open('log/act_pose_y.ob', 'w') as fp:
+    with open('log/act_pose_y.ob', 'wb') as fp:
         pickle.dump(act_pose_y, fp)
         fp.close() 
 
