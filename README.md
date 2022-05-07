@@ -22,8 +22,8 @@ Reval supports both the [Husky simulator](https://www.clearpathrobotics.com/asse
 ## Build status
 Build Type      |    Status     |
 -----------     | --------------|
-ROS melodic     | ![ROS melodic](https://img.shields.io/badge/ROS_meoldic-failing-FF0000)
-ROS noetic      | ![ROS noetic](https://img.shields.io/badge/ROS_noetic-passing-success)
+ROS melodic     | [![ROS melodic](https://img.shields.io/badge/ROS_meoldic-failing-FF0000)](http://wiki.ros.org/melodic/Installation/Ubuntu)
+ROS noetic      | [![ROS noetic](https://img.shields.io/badge/ROS_noetic-passing-success)](http://wiki.ros.org/noetic/Installation/Ubuntu)
 
 Platform        |    Status     |
 -----------     | --------------|
