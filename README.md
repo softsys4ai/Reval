@@ -1,3 +1,5 @@
+![visitor badge](https://visitor-badge.glitch.me/badge?page_id=abirhossen786.486687358-badge)
+
 # Reval
 Reval is an open-source framework to evaluate the performace of Robotics platforms. Currently it only supports [Husky platform](https://clearpathrobotics.com/husky-unmanned-ground-vehicle-robot/). The useres can evalute the performance of a mission for a given gazebo envirnoment (or on their own gazebo envirnment) for different configurations in an automated fashion and log the results. Reveal records the [rosbag](http://wiki.ros.org/rosbag) and evalutes all ros topics from the rosbag file. In addition, Reval supports the following metrics to evaluate the quality of mission:
 
@@ -17,6 +19,20 @@ To change the gola location: [Update Goal location](/husky_ws/data_log/README.md
 
 Reval supports both the [Husky simulator](https://www.clearpathrobotics.com/assets/guides/melodic/husky/SimulatingHusky.html) and Hysky physical robot. The instructions provided below are for Husky simulator. To run Reval on the physical Husky, first setup your husky using [Husky UGV Tutorial](https://www.clearpathrobotics.com/assets/guides/melodic/husky/BackUpHusky.html) then follow the below instructions.
 
+## Build status
+Build Type      |    Status     |
+-----------     | --------------|
+ROS melodic     | ![ROS melodic](https://img.shields.io/badge/ROS_meoldic-failing-FF0000)
+ROS noetic      | ![ROS noetic](https://img.shields.io/badge/ROS_noetic-passing-success)
+
+Platform        |    Status     |
+-----------     | --------------|
+Husky UGV     | [![Husky UGV](https://img.shields.io/badge/Husky_UGV-passing-success)](https://www.clearpathrobotics.com/assets/guides/noetic/husky/SimulatingHusky.html)
+TurtleBot4      | [![TurtleBot3](https://img.shields.io/badge/TurtleBot3-coming_soon-ff69b4)](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/)
+OceanWATERS     | [![OW](https://img.shields.io/badge/OceanWATERS-coming_soon-ff69b4)](https://github.com/nasa/ow_simulator)
+
+
+
 ## Requirements
 * Ubuntu 18 or Ubuntu 20
 * [ROS Melodic](http://wiki.ros.org/melodic/Installation/Ubuntu) or [ROS Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu) 
@@ -27,30 +43,16 @@ Reval supports both the [Husky simulator](https://www.clearpathrobotics.com/asse
 For ROS Melodic
 ```sh
 sudo apt-get install ros-melodic-husky-simulator
-```
-
-```sh
 sudo apt-get install ros-melodic-husky-navigation
-```
-
-```sh
 sudo apt-get install ros-melodic-husky-desktop
 ```
-
 
 For ROS Noetic
 ```sh
 sudo apt-get install ros-noetic-husky-simulator
-```
-
-```sh
 sudo apt install ros-noetic-husky-navigation
-```
-
-```sh
 sudo apt-get install ros-noetic-husky-desktop
 ```
-
 
 ### Installing [rosbag](http://wiki.ros.org/rosbag) for Python
 #### Download and install [ros_readbag.py](http://wiki.ros.org/ROS/Tutorials/reading%20msgs%20from%20a%20bag%20file) using these commands:
