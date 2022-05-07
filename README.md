@@ -83,21 +83,23 @@ Re-source your `~/.bahsrc` file
 source ~/.bashrc
 ```
 ## Install dependencies
+Clone the repo
+```sh
+git clone https://github.com/softsys4ai/Reval.git
+```
+Installing the dependencies
 ```sh
 sudo apt install ripgrep
 pip install pandas
 pip install tqdm
 pip install tabulate 
 ```
+Or `cd Reval/` run `./requirements.sh`. If you face permission denied, first run `chmod +x requirements.sh` 
+
 ## Building Reval
 Source your ROS setup.sh file
 ```sh
 source /opt/ros/<ros distro>/setup.bash
-```
-
-Clone the repo 
-```sh
-git clone https://github.com/softsys4ai/Reval.git
 ```
 
 Run `catkin build` on the `Reval root` directory
