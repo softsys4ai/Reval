@@ -140,7 +140,12 @@ examaple: `python reval.py -v false -d 10`
 ### Demo
 https://user-images.githubusercontent.com/73362969/165874997-e870c4e2-95df-4af5-a5cd-c2d3f6d4935e.mp4
 
-
+## Contacts
+Please feel free to contact via email if you have any feedbacks. Thank you for using Reval!
+|Name|Email|     
+|---------------|------------------|      
+|Md Abir Hossen|mhossen@email.sc.edu|          
+|Pooyan Jamshidi|pjamshid@cse.sc.edu|  
 
 
 
