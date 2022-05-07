@@ -105,6 +105,8 @@ cd Reval/
 ```sh
 catkin build
 ```
+N.b. If you face `Catkin command not found`, install `sudo apt-get install python3-catkin-tools` OR you can use `catkin_make`
+
 If everything is correct, you should see something similar to the following output
 
 ![catkin_build](https://user-images.githubusercontent.com/73362969/165857662-dd52c4d0-8a00-45f3-bdfc-1ceb9c9bde62.jpg)
