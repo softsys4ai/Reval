@@ -1,4 +1,5 @@
 #!/bin/sh
-sudo apt-get install ros-noetic-husky-simulator &&
-sudo apt install ros-noetic-husky-navigation &&
-sudo apt-get install ros-noetic-husky-desktop
+sudo apt install ripgrep &&
+pip install pandas &&
+pip install tqdm &&
+pip install tabulate 
