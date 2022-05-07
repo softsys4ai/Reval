@@ -28,7 +28,7 @@ ROS noetic      | [![ROS noetic](https://img.shields.io/badge/ROS_noetic-passing
 Platform        |    Status     |
 -----------     | --------------|
 Husky UGV     | [![Husky UGV](https://img.shields.io/badge/Husky_UGV-passing-success)](https://www.clearpathrobotics.com/assets/guides/noetic/husky/SimulatingHusky.html)
-TurtleBot4      | [![TurtleBot3](https://img.shields.io/badge/TurtleBot3-coming_soon-ff69b4)](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/)
+TurtleBot3      | [![TurtleBot3](https://img.shields.io/badge/TurtleBot3-coming_soon-ff69b4)](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/)
 OceanWATERS     | [![OW](https://img.shields.io/badge/OceanWATERS-coming_soon-ff69b4)](https://github.com/nasa/ow_simulator)
 
 
