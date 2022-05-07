@@ -21,8 +21,6 @@ Reval supports both the [Husky simulator](https://www.clearpathrobotics.com/asse
 * Ubuntu 18 or Ubuntu 20
 * [ROS Melodic](http://wiki.ros.org/melodic/Installation/Ubuntu) or [ROS Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu) 
 * Python 2.7 (for ROS Melodic), Python 3.6+ (for ROS Noetic)
-* [Pandas 1.4+](https://pypi.org/project/pandas/)
-* ripgrep (`sudo apt install ripgrep`)
 
 ## Installations
 ### Installing the [husky simulator](https://www.clearpathrobotics.com/assets/guides/melodic/husky/SimulatingHusky.html)
@@ -107,6 +105,8 @@ cd Reval/
 ```sh
 catkin build
 ```
+N.b. If you face `Catkin command not found`, install `sudo apt-get install python3-catkin-tools` OR you can use `catkin_make`
+
 If everything is correct, you should see something similar to the following output
 
 ![catkin_build](https://user-images.githubusercontent.com/73362969/165857662-dd52c4d0-8a00-45f3-bdfc-1ceb9c9bde62.jpg)
