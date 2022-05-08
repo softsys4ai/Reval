@@ -141,7 +141,7 @@ optional arguments:
   -v , -viz     turn on/off visualization of gazebo and rviz (default: True)
   -e , -epoch   number of data-points to be recorded (default: 1)
 ```
-examaple: `python reval.py -v false -d 10` 
+examaple: `python reval.py -v false -e 10` 
 
 ### Demo
 
