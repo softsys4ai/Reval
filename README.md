@@ -144,8 +144,14 @@ optional arguments:
 examaple: `python reval.py -v false -d 10` 
 
 ### Demo
-https://user-images.githubusercontent.com/73362969/167276835-6f514a3a-c7ce-45b9-b9fd-ad6223582792.mp4
 
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/73362969/167279446-c1727093-1c2f-4f3f-92a2-40ecee5de599.png"
+</p>
+
+Reval in action:
+  
+https://user-images.githubusercontent.com/73362969/167276835-6f514a3a-c7ce-45b9-b9fd-ad6223582792.mp4
 
 ## Customizations
 - To define your custom configuration options: [Set Configuration](/Reval/src/benchmark/README.md#cahnging-configuration-options)
