@@ -1,21 +1,27 @@
 ![visitor badge](https://visitor-badge.glitch.me/badge?page_id=abirhossen786.486687358-badge)
 
 # Reval
-Reval is an open-source framework to evaluate the performace of Robotics platforms. Currently it only supports [Husky platform](https://clearpathrobotics.com/husky-unmanned-ground-vehicle-robot/). The useres can evalute the performance of a mission for a given gazebo envirnoment (or on their own gazebo envirnment) for different configurations in an automated fashion and log the results. Reveal records the [rosbag](http://wiki.ros.org/rosbag) and evalutes all ros topics from the rosbag file. In addition, Reval supports the following metrics to evaluate the quality of mission:
+Reval is an open-source framework to evaluate the performace of Robotics platforms. Currently it only supports [Husky platform](https://clearpathrobotics.com/husky-unmanned-ground-vehicle-robot/). The useres can evalute the performance of a mission for a given gazebo envirnoment (or on their own gazebo envirnment) for different configurations in an automated fashion and log the results. Reveal records the [rosbag](http://wiki.ros.org/rosbag) and evalutes all ros topics from the rosbag file. In addition, Reval supports the following metrics to evaluate the quality of a mission:
 
 **Evaluation metrics**
-* number of failed produced path by DWA planner
-* number of re-planning by DWA planner
-* number of recovery behaviour executed 
-* distance traveled
-* mission time
-* mission success: checks if the robot chead the goal
+Metrics         |    Description    |
+-----------     | ------------------|
+DWA F           | # of failed produced path by DWA planner
+DWA NP          | # of re-planning by DWA planner
+DWA IT          | # of DWA invalid trajectory
+RR              | # of rotate recovery excuted
+RCU             | # of ClearCostMaps recovery executed for unstuck robot 
+RCL             | # of ClearCostMaps layer recovery executed
+IRC             | # of invalid rotation cmd
+ERG             | # of error rotating on the goal
+DRMS            | The square root of the average of the squared horizontal position errors, <img src="https://latex.codecogs.com/svg.image?\inline&space;\small&space;DRMS=\sqrt{\sigma_x^2&plus;\sigma_y^2}" title="https://latex.codecogs.com/svg.image?\inline \small DRMS=\sqrt{\sigma_x^2+\sigma_y^2}" /> ;   where standard deviation of the delta x and y,  <img src="https://latex.codecogs.com/svg.image?\inline&space;\small&space;\bg{white}\sigma&space;=&space;\sqrt{\frac{1}{N}\sum_{i=1}^N(x_i-\mu)^2}" title="https://latex.codecogs.com/svg.image?\inline \small \bg{white}\sigma = \sqrt{\frac{1}{N}\sum_{i=1}^N(x_i-\mu)^2}" />. Probability of 65%
+2DRMS           | Twice the Distance Root Mean Squared (DRMS) of the horizontal position error, <img src="https://latex.codecogs.com/svg.image?\inline&space;\small&space;2DRMS=2\sqrt{\sigma_x^2&plus;\sigma_y^2}" title="https://latex.codecogs.com/svg.image?\inline \small 2DRMS=2\sqrt{\sigma_x^2+\sigma_y^2}" />. Probability of 95%
+CPE             | The radius of circle centered at the true position, containing the position estimate with probability of 50%. <img src="https://latex.codecogs.com/svg.image?\inline&space;\small&space;CEP=0.59(\sigma_x&plus;\sigma_y)" title="https://latex.codecogs.com/svg.image?\inline \small CEP=0.59(\sigma_x+\sigma_y)" />
+RNS             | robustness in narrow spaces, <img src="https://latex.codecogs.com/svg.image?\inline&space;\small&space;RNS=\frac{1}{N_{s}}\sum_{i=0}^{N_{s}}&space;(passed_{Ns})" title="https://latex.codecogs.com/svg.image?\inline \small RNS=\frac{1}{N_{s}}\sum_{i=0}^{N_{s}} (passed_{Ns})" />  ; where Ns is the total narrow spaces in the gazebo environment, and passed_Ns is the narrow spaces that the robot successfully crossed.
+DT             | total distance traveled during a mission
+MT             | time taken to complete a mission
+MS             | mission success. Example: if the robot successfully reached point A to B
 
-To define your custom configuration values: [Set Configuration](/husky_ws/data_log/README.md#cahnging-configuration-values)
-
-To use can custom gazebo environment: [Use custom gazebo environment](/husky_ws/data_log/README.md#to-use-your-custom-map)
-
-To change the gola location: [Update Goal location](/husky_ws/data_log/README.md#to-change-the-goal-location)
 
 Reval supports both the [Husky simulator](https://www.clearpathrobotics.com/assets/guides/melodic/husky/SimulatingHusky.html) and Hysky physical robot. The instructions provided below are for Husky simulator. To run Reval on the physical Husky, first setup your husky using [Husky UGV Tutorial](https://www.clearpathrobotics.com/assets/guides/melodic/husky/BackUpHusky.html) then follow the below instructions.
 
@@ -140,14 +146,16 @@ examaple: `python reval.py -v false -d 10`
 ### Demo
 https://user-images.githubusercontent.com/73362969/167276835-6f514a3a-c7ce-45b9-b9fd-ad6223582792.mp4
 
+
+## Customizations
+- To define your custom configuration options: [Set Configuration](/Reval/src/benchmark/README.md#cahnging-configuration-options)
+- To use your own custom gazebo environment: [Use custom gazebo environment](/Reval/src/benchmark/README.md#custom-gazebo-environment)
+- To change the goal locations: [Update Goal location](/Reval/src/benchmark/README.md#define-mission-specifications)
+
+
 ## Contacts
 Please feel free to contact via email if you have any feedbacks. Thank you for using Reval!
 |Name|Email|     
 |---------------|------------------|      
 |Md Abir Hossen|mhossen@email.sc.edu|          
 |Pooyan Jamshidi|pjamshid@cse.sc.edu|  
-
-
-
-
-
