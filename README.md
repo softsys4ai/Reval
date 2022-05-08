@@ -138,7 +138,7 @@ optional arguments:
 examaple: `python reval.py -v false -d 10` 
 
 ### Demo
-https://user-images.githubusercontent.com/73362969/165874997-e870c4e2-95df-4af5-a5cd-c2d3f6d4935e.mp4
+https://user-images.githubusercontent.com/73362969/167276835-6f514a3a-c7ce-45b9-b9fd-ad6223582792.mp4
 
 ## Contacts
 Please feel free to contact via email if you have any feedbacks. Thank you for using Reval!
