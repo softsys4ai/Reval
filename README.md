@@ -121,7 +121,9 @@ N.b. If you face `Catkin command not found`, install `sudo apt-get install pytho
 
 If everything is correct, you should see something similar to the following output
 
-![catkin_build](https://user-images.githubusercontent.com/73362969/165857662-dd52c4d0-8a00-45f3-bdfc-1ceb9c9bde62.jpg)
+<!-- ![catkin_build](https://user-images.githubusercontent.com/73362969/165857662-dd52c4d0-8a00-45f3-bdfc-1ceb9c9bde62.jpg) -->
+![Catkin build](https://user-images.githubusercontent.com/73362969/167683326-92265a48-f735-4cd1-a44e-db4c67535629.gif)
+
 
 
 ## Running Reval
@@ -146,14 +148,21 @@ optional arguments:
 examaple: `python reval.py -v off -e 10` 
 
 ### Demo
-
+Visualization on:
 <p align="center">
-  <img src= "https://user-images.githubusercontent.com/73362969/167279446-c1727093-1c2f-4f3f-92a2-40ecee5de599.png"
+  <img src= "https://user-images.githubusercontent.com/73362969/167681739-5e100673-4bdd-4988-9da1-894abf29cf3e.gif"
 </p>
 
-Reval in action:
-  
-https://user-images.githubusercontent.com/73362969/167276835-6f514a3a-c7ce-45b9-b9fd-ad6223582792.mp4
+<!-- <p align="center">
+  <img src= "https://user-images.githubusercontent.com/73362969/167279446-c1727093-1c2f-4f3f-92a2-40ecee5de599.png"
+</p> -->
+
+Visualization off:
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/73362969/167684493-9181c890-4ec4-4503-8dc1-ba59fffc19e4.gif"
+</p>  
+
+<!-- https://user-images.githubusercontent.com/73362969/167276835-6f514a3a-c7ce-45b9-b9fd-ad6223582792.mp4 -->
 
 ## Customizations
 - To define your custom configuration options: [Set Configuration](/src/benchmark/README.md#cahnging-configuration-options)
