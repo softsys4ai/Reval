@@ -141,7 +141,7 @@ optional arguments:
   -v , -viz     turn on/off visualization of gazebo and rviz (default: True)
   -e , -epoch   number of data-points to be recorded (default: 1)
 ```
-examaple: `python reval.py -v false -d 10` 
+examaple: `python reval.py -v false -e 10` 
 
 ### Demo
 
@@ -154,9 +154,9 @@ Reval in action:
 https://user-images.githubusercontent.com/73362969/167276835-6f514a3a-c7ce-45b9-b9fd-ad6223582792.mp4
 
 ## Customizations
-- To define your custom configuration options: [Set Configuration](/Reval/src/benchmark/README.md#cahnging-configuration-options)
-- To use your own custom gazebo environment: [Use custom gazebo environment](/Reval/src/benchmark/README.md#custom-gazebo-environment)
-- To change the goal locations: [Update Goal location](/Reval/src/benchmark/README.md#define-mission-specifications)
+- To define your custom configuration options: [Set Configuration](/src/benchmark/README.md#cahnging-configuration-options)
+- To use your own custom gazebo environment: [Use custom gazebo environment](/src/benchmark/README.md#custom-gazebo-environment)
+- To change the goal locations: [Update Goal location](/src/benchmark/README.md#define-mission-specifications)
 
 
 ## Contacts
