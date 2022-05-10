@@ -19,6 +19,7 @@ DRMS            | The square root of the average of the squared horizontal posit
 CPE             | The radius of circle centered at the true position, containing the position estimate with probability of 50%. <img src="https://latex.codecogs.com/svg.image?\inline&space;\small&space;CEP=0.59(\sigma_x&plus;\sigma_y)" title="https://latex.codecogs.com/svg.image?\inline \small CEP=0.59(\sigma_x+\sigma_y)" />
 RNS             | robustness in narrow spaces, <img src="https://latex.codecogs.com/svg.image?\inline&space;\small&space;RNS=\frac{1}{N_{s}}\sum_{i=0}^{N_{s}}&space;(passed_{Ns})" title="https://latex.codecogs.com/svg.image?\inline \small RNS=\frac{1}{N_{s}}\sum_{i=0}^{N_{s}} (passed_{Ns})" />  ; where Ns is the total narrow spaces in the gazebo environment, and passed_Ns is the narrow spaces that the robot successfully crossed.
 DT             | total distance traveled during a mission
+BP             | battery percentage. For more details: [Gazebo-ROS battery plugin](src/husky_ws/src/gazebo_ros_battery/#gazebo-ros-battery-plugin)
 MT             | time taken to complete a mission
 MS             | mission success. Example: if the robot successfully reached point A to B
 
