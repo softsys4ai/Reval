@@ -48,7 +48,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
   <xacro:include filename="$(find husky_description)/urdf/accessories/sick_lms1xx_mount.urdf.xacro"/>
   <xacro:include filename="$(find husky_description)/urdf/accessories/sensor_arch.urdf.xacro"/>
 
-   <!-- <xacro:include filename="$(find gazebo_ros_battery)/xacro/battery.xacro"/> -->
+   <xacro:include filename="$(find gazebo_ros_battery)/xacro/battery.xacro"/>
 
   <xacro:property name="M_PI" value="3.14159"/>
 
@@ -140,11 +140,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
   <xacro:husky_decorate />
 
   <xacro:if value="$(arg laser_enabled)">
-
     <xacro:sick_lms1xx_mount prefix="base"/>
-
     <xacro:sick_lms1xx frame="base_laser" topic="scan" robot_namespace="$(arg robot_namespace)"/>
-
     <joint name="laser_mount_joint" type="fixed">
       <origin xyz="$(arg laser_xyz)" rpy="$(arg laser_rpy)" />
       <parent link="top_plate_link" />
@@ -178,7 +175,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 
   <!-- battery -->
 
-  <!-- <link name="battery_link"/>
+  <link name="battery_link"/>
 
   <joint name="battery_joint" type="fixed">
     <parent link="base_link"/>
@@ -186,14 +183,14 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
   </joint>
 
   <xacro:battery sensor_name="battery" frame_id="battery_link" 
-                 params_yaml="$(find gazebo_ros_battery)/params/G24B4.yaml"/> -->
+                 params_yaml="$(find gazebo_ros_battery)/params/my_custom_config.yaml"/>
 
 <!-- bumper -->
-  <!-- <gazebo reference="base_link">
+  <gazebo reference="base_link">
     <sensor name="bumper_sensor" type="contact">
         <selfCollide>true</selfCollide>
         <alwaysOn>true</alwaysOn>
-        <updateRate>15.0</updateRate>
+        <updateRate>1.0</updateRate>
         <material>Gazebo/Red</material>
         <contact>
             <collision>base_link_collision</collision>
@@ -203,16 +200,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             <frameName>world</frameName>
         </plugin>
     </sensor>
-</gazebo> -->
-<!-- <gazebo>
-  <plugin name="ros_bumper_controller" filename="libgazebo_ros_bumper.so">
-    <robotNamespace>$(arg robot_namespace)</robotNamespace>
-    <alwaysOn>true</alwaysOn>
-    <updateRate>50</updateRate>
-    <bumperTopicName>husky/collision</bumperTopicName>
-    <frameName>world</frameName>
-  </plugin>
-</gazebo>   -->
+</gazebo>
 
   <gazebo>
     <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
