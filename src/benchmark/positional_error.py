@@ -113,6 +113,7 @@ def Drms():
     with open('log/drms.txt', 'w') as f:
         f.write(str(drms))
         f.close() 
+        
 # CPE 
 """
 This is the traditional CPE 

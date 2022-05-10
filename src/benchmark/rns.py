@@ -28,10 +28,4 @@ def CalcRns():
             pass
 
 def ResetRNS():
-    os.remove("log/rns")  
-
-
-rns(2,3)
-CalcRns()
-
-ResetRNS()
+    os.remove("log/rns")

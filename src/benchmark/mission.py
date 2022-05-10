@@ -1,11 +1,13 @@
 import actionlib
 import rospy
 import time
-import subprocess
 from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
 from positional_error import *
 from rns import *
 from goals import *
+from mission_utils import *
+from utils import bcolors, Loader
+
 
 goal = MoveBaseGoal()
 goal.target_pose.header.frame_id = 'odom' 
@@ -16,21 +18,16 @@ def target(x, y, z, w):
     goal.target_pose.pose.orientation.z = z
     goal.target_pose.pose.orientation.w = w
 
-def GetCurrPose():
-    subprocess.check_call("python current_pose.py '%s'", shell=True)
-
-def PoseSamples():
-    subprocess.check_call("python pose_samples.py '%s'", shell=True)    
-
 
 if __name__ == "__main__":
     rospy.init_node('send_client_goal')
     client = actionlib.SimpleActionClient('/move_base', MoveBaseAction)
-    rospy.loginfo("Mission in progress...")
-    client.wait_for_server()    
+    client.wait_for_server()  
 
+    loader = Loader("Mission in progress...", bcolors.CGREEN + "Mission done!" + bcolors.ENDC, 0.05).start()
+  
     start_time = time.time()
-    
+
     # This is where we define mission specifications
     # ----------------Target 1----------------
     target(goal1_x, goal1_y, goal1_z, goal1_w)
@@ -100,6 +97,9 @@ if __name__ == "__main__":
 
 
     end_time = round((time.time() - start_time), 2)
+
     with open('log/mission_time.txt', 'w') as f:
         f.write(str(end_time))
         f.close()
+
+    loader.stop()     
