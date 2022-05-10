@@ -1,7 +1,9 @@
 #!/bin/sh
 
-# Extract /rosout
+# Extract /rosout and other topics
 time ros_readbagfile log/all_topics.bag /rosout > log/topics.yaml
+time ros_readbagfile log/all_topics.bag /battery/status > log/battery_status.yaml
+time ros_readbagfile log/all_topics.bag /collisions > log/collisions.yaml
 
 sleep 3
 
@@ -33,9 +35,14 @@ time rg 'msg: "Rotation cmd in collision' log/topics.yaml | sort -V > log/invali
 # Error rotating on goal
 time rg 'msg: "Error when rotating' log/topics.yaml | sort -V > log/rotating_goal_error.txt
 
-
 # Mission failed
 # time rg 'msg: "Aborting' log/topics.yaml | sort -V > log/mission_fail.txt
 
-Mission success
+# Mission success
 time rg 'msg: "Goal reached' log/topics.yaml | sort -V > log/mission_success.txt
+
+# Battery 
+time rg 'percentage: ' log/battery_status.yaml | sort -V > log/battery_percentage.txt
+
+# Collisions 
+time rg 'data: ' log/collisions.yaml | sort -V > log/collisions.txt
