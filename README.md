@@ -20,6 +20,7 @@ CPE             | The radius of circle centered at the true position, containing
 RNS             | robustness in narrow spaces, <img src="https://latex.codecogs.com/png.image?\inline&space;\small&space;\dpi{120}\bg{white}RNS=\frac{1}{N_{s}}\sum_{i=0}^{N_{s}}&space;(passed_{Ns})" title="https://latex.codecogs.com/png.image?\inline \small \dpi{120}\bg{white}RNS=\frac{1}{N_{s}}\sum_{i=0}^{N_{s}}&space;(passed_{Ns})" /> ; where Ns is the total narrow spaces in the gazebo environment, and passed_Ns is the narrow spaces that the robot successfully crossed.
 DT             | total distance traveled during a mission
 BP             | battery percentage. For more details: [Gazebo-ROS battery plugin](src/husky_ws/src/gazebo_ros_battery/#gazebo-ros-battery-plugin)
+Col            | number of collisions in a mission
 MT             | time taken to complete a mission
 MS             | mission success. Example: if the robot successfully reached point A to B
 
