@@ -140,10 +140,10 @@ python reval.py
 ```
 optional arguments:
   -h, --help    show this help message and exit
-  -v , -viz     turn on/off visualization of gazebo and rviz (default: True)
+  -v , -viz     turn on/off visualization of gazebo and rviz (default: On)
   -e , -epoch   number of data-points to be recorded (default: 1)
 ```
-examaple: `python reval.py -v false -e 10` 
+examaple: `python reval.py -v off -e 10` 
 
 ### Demo
 
