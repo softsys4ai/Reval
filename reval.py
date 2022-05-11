@@ -92,7 +92,7 @@ for i in tqdm(range(args.e), colour="green", desc="Epoch", bar_format='{l_bar}{b
 
         eval = subprocess.check_call("gnome-terminal -- ./eval.sh '%s'", cwd="src/benchmark/", shell=True)
         positinal_metrics = subprocess.check_call("python positional_error.py '%s'", cwd="src/benchmark/", shell=True)
-        for i in tqdm(range(17),  desc="Evaluating logs", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'):
+        for i in tqdm(range(20),  desc="Evaluating logs", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'):
             time.sleep(1)
         
         print("")
@@ -139,7 +139,7 @@ for i in tqdm(range(args.e), colour="green", desc="Epoch", bar_format='{l_bar}{b
 
         eval = subprocess.check_call("gnome-terminal -- ./eval.sh '%s'", cwd="src/benchmark/", shell=True)
         positinal_metrics = subprocess.check_call("python positional_error.py '%s'", cwd="src/benchmark/", shell=True)
-        for i in tqdm(range(17),  desc="Evaluating logs", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'):
+        for i in tqdm(range(20),  desc="Evaluating logs", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'):
             time.sleep(1)
         
         print("")
