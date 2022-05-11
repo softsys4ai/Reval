@@ -1,11 +1,11 @@
 num_of_consumers: 1
 publish_voltage: True
-technology: 1
+technology: 2
 design_capacity: 4.0
 number_of_cells: 6
-nominal_voltage: 12
-full_charge_voltage: 12.2
-cut_off_voltage: 9.0
+nominal_voltage: 24
+full_charge_voltage: 25.2
+cut_off_voltage: 18.0
 internal_resistance: 0.11
 current_filter_tau: 1
 polarization_constant: 0.07

@@ -52,7 +52,6 @@ if __name__ == "__main__":
     curr_x = float(curr_x)     
     rns(curr_x, goal2_x)
     time.sleep(0.5)
-    PosError(goal2_x, goal2_y)
     cx.close()
 
     # ----------------Target 3----------------
@@ -63,8 +62,7 @@ if __name__ == "__main__":
     cx = open("log/cx.txt", "r")
     curr_x = cx.read() 
     curr_x = float(curr_x)    
-    rns(curr_x, goal3_x) 
-    PosError(goal3_x, goal3_y)  
+    rns(curr_x, goal3_x)  
     cx.close()
 
     # ----------------Target 4----------------
@@ -76,7 +74,6 @@ if __name__ == "__main__":
     curr_x = cx.read() 
     curr_x = float(curr_x)     
     rns(curr_x, goal4_x)   
-    PosError(goal4_x, goal4_y) 
     cx.close() 
 
     # ----------------Target 5----------------
@@ -88,7 +85,6 @@ if __name__ == "__main__":
     curr_x = cx.read() 
     curr_x = float(curr_x)     
     rns(curr_x, goal5_x)
-    PosError(goal5_x, goal5_y)
     cx.close()
 
     time.sleep(0.5)
