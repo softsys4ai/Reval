@@ -148,7 +148,7 @@ optional arguments:
 examaple: `python reval.py -v off -e 10` 
 
 ### Demo
-Visualization on:
+Visualization off:
 <p align="center">
   <img src= "https://user-images.githubusercontent.com/73362969/167681739-5e100673-4bdd-4988-9da1-894abf29cf3e.gif"
 </p>
@@ -157,7 +157,7 @@ Visualization on:
   <img src= "https://user-images.githubusercontent.com/73362969/167279446-c1727093-1c2f-4f3f-92a2-40ecee5de599.png"
 </p> -->
 
-Visualization off:
+Visualization on:
 <p align="center">
   <img src= "https://user-images.githubusercontent.com/73362969/167684493-9181c890-4ec4-4503-8dc1-ba59fffc19e4.gif"
 </p>  
