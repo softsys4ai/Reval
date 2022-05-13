@@ -1,5 +1,7 @@
 ## Changing configuration options
 To change the configuration options, update the `set_config.py` file to your desire configuration values.
+
+Example of the subset of configuration options:
 ```python
 cost_scaling_factor_g = random.randint(1,20) # A scaling factor to apply to cost values during inflation
 update_frequency_g = random.randint(4,7)  # The frequency in Hz for the map to be updated.
