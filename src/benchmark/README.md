@@ -31,7 +31,7 @@ Currently we do not support automatic generated environment, which will be in yo
 ```
 
 ## Define mission specifications
-To define target locations update the coordinates in the `goals.py` file. It is important to define the `narrow_spaces` for your custom gazebo environment to get the `RNS` metric value. Currently Reval only supports maximum 5 target locations, we plan to add more flexibility in our future release.
+To define target locations update the coordinates in the `goals.py` file. It is important to define the `narrow_spaces` for your custom gazebo environment to get the `RNS` metric value. Currently the RNS metric only supports maximum 5 target locations, we plan to add more flexibility in our future release.
 ```python
 # goals -> mission specification
 narrow_spaces = 5
