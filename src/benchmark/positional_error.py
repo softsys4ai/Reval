@@ -39,7 +39,8 @@ def PosError(goal_x, goal_y):
 
 # <---------Calculating positional metrics-------->
 
-def successProba():
+# using ground truth of target one
+def EuclideanDistance():
     with open('log/curr_pose_x.ob', 'rb') as fp:
         curr_x = pickle.load(fp)  
     with open('log/act_pose_x.ob', 'rb') as fp:
@@ -48,13 +49,11 @@ def successProba():
         curr_y = pickle.load(fp) 
     with open('log/act_pose_y.ob', 'rb') as fp:
         act_y = pickle.load(fp) 
-
-    del_x_g = np.subtract(act_x, curr_x)
-    del_y_g = np.subtract(act_y, curr_y)
-    sigma_x_g = np.std(del_x_g, ddof=1) # sample std
-    sigma_y_g = np.std(del_y_g, ddof=1) # sample std
-    twoDrms_g = 2 * math.sqrt((sigma_x_g ** 2) + (sigma_y_g ** 2))
-    # print("successproba: ",twoDrms_g)
+    # target one pose(curr_x[0], curr_y[0])    
+    euc_distance = math.sqrt((goal1_x - curr_x[0]) ** 2 + (goal1_y - curr_y[0]) ** 2)
+    with open('log/euclidean_distance.txt', 'w') as f:
+        f.write(str(euc_distance))
+        f.close() 
 
 
 # 2Drms when groud truth is known
@@ -65,23 +64,25 @@ N.b. we discarded getting the samples when the robot first
 spwan in the world because as the robot start moving it
 would have more accuracte pose estimation. 
 """
-def twoDrmsG():
-    with open('log/x_samples.ob', 'rb') as fp:
-        curr_x = pickle.load(fp)  
-    with open('log/y_samples.ob', 'rb') as fp:
-        curr_y = pickle.load(fp) 
+# def twoDrmsG():
+#     with open('log/x_samples.ob', 'rb') as fp:
+#         curr_x = pickle.load(fp)  
+#     with open('log/y_samples.ob', 'rb') as fp:
+#         curr_y = pickle.load(fp) 
 
-    act_x = goal1_x  # This the ground truth of pose_x for the target 1
-    act_y = goal1_y  # This the ground truth pose_y for the target 1
-    del_x_g = [i - act_x for i in curr_x]
-    del_y_g = [i - act_y for i in curr_y]
-    sigma_x_g = np.std(del_x_g, ddof=1) # sample std
-    sigma_y_g = np.std(del_y_g, ddof=1) # sample std
-    twoDrms_g = 2 * math.sqrt((sigma_x_g ** 2) + (sigma_y_g ** 2))
-    with open('log/twoDrmsG.txt', 'w') as f:
-        f.write(str(twoDrms_g))
-        f.close() 
+#     act_x = goal1_x  # This the ground truth of pose_x for the target 1
+#     act_y = goal1_y  # This the ground truth pose_y for the target 1
+#     del_x_g = [i - act_x for i in curr_x]
+#     del_y_g = [i - act_y for i in curr_y]
+#     sigma_x_g = np.std(del_x_g, ddof=1) # sample std
+#     sigma_y_g = np.std(del_y_g, ddof=1) # sample std
+#     twoDrms_g = 2 * math.sqrt((sigma_x_g ** 2) + (sigma_y_g ** 2))
+#     with open('log/twoDrmsG.txt', 'w') as f:
+#         f.write(str(twoDrms_g))
+#         f.close() 
 
+
+# using pose_sampling
 def sigma():
     with open('log/x_samples.ob', 'rb') as fp:
         curr_x = pickle.load(fp)  
@@ -113,6 +114,7 @@ def Drms():
     with open('log/drms.txt', 'w') as f:
         f.write(str(drms))
         f.close() 
+        
 # CPE 
 """
 This is the traditional CPE 
@@ -125,8 +127,7 @@ def CEP():
 
 if __name__ == '__main__':
     sigma()
-    twoDrmsG()
     twoDrms()
     Drms()
     CEP()
-    successProba()
+    EuclideanDistance()

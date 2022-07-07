@@ -9,6 +9,8 @@ from param_nodes import move_base_DWAPlanner
 
 rospy.init_node('huskyconfig_py', anonymous=True)
 
+#----------------Dynamic reconfigure-----------------
+
 cost_scaling_factor_g = random.randint(1,20) # A scaling factor to apply to cost values during inflation
 update_frequency_g = random.randint(4,7)  # The frequency in Hz for the map to be updated.
 publish_frequency_g = random.randint(1,4) # The frequency in Hz for the map to be publish display information.
@@ -32,6 +34,8 @@ yaw_goal_tolerance = round(random.uniform(0.1, 0.3),2) # The tolerance in radian
 xy_goal_tolerance = round(random.uniform(0.1, 0.4),2) # The tolerance in meters for the controller in the x & y distance when achieving a goal
 min_vel_x = round(random.uniform(-0.3, 0),2) # The minimum x velocity for the robot in m/s, negative for backwards motion.
 
+
+#----------------DO NOT CHANGE--------------------
 
 df = pd.DataFrame({"cost_scaling_factor_g":[cost_scaling_factor_g],
                 "update_frequency_g":[update_frequency_g],"publish_frequency_g":[publish_frequency_g],

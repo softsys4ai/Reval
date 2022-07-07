@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import math
-import roslib, rospy
+import rospy
 from move_base_msgs.msg import MoveBaseActionGoal
 from move_base_msgs.msg import MoveBaseActionFeedback
       

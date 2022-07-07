@@ -1,0 +1,1660 @@
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Scanning ROS bag file "log/all_topics.bag"
+# for the following topics:
+#    /rosout
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# =======================================
+# topic:           /rosout
+# msg_count:       1
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 3
+  stamp: 
+    secs: 1367
+    nsecs:  56000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /diagnostics"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       2
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 4
+  stamp: 
+    secs: 1367
+    nsecs:  57000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /tf"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       3
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 5
+  stamp: 
+    secs: 1367
+    nsecs:  58000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /twist_marker_server/update_full"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       4
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 6
+  stamp: 
+    secs: 1367
+    nsecs:  60000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /twist_marker_server/update"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       5
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 7
+  stamp: 
+    secs: 1367
+    nsecs:  61000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /twist_marker_server/cmd_vel"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       6
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 8
+  stamp: 
+    secs: 1367
+    nsecs:  62000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /tf_static"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       7
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 9
+  stamp: 
+    secs: 1367
+    nsecs:  63000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /joy_teleop/cmd_vel"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       8
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 10
+  stamp: 
+    secs: 1367
+    nsecs:  64000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /joy_teleop/joy"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       9
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 11
+  stamp: 
+    secs: 1367
+    nsecs:  65000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /husky_velocity_controller/cmd_vel"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       10
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 12
+  stamp: 
+    secs: 1367
+    nsecs:  66000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /odometry/filtered"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       11
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 13
+  stamp: 
+    secs: 1367
+    nsecs:  67000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /clock"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       12
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 14
+  stamp: 
+    secs: 1367
+    nsecs:  68000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /gazebo/link_states"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       13
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 15
+  stamp: 
+    secs: 1367
+    nsecs:  69000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /gazebo/model_states"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       14
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 16
+  stamp: 
+    secs: 1367
+    nsecs:  70000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /gazebo/performance_metrics"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       15
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 17
+  stamp: 
+    secs: 1367
+    nsecs:  71000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /gazebo/parameter_descriptions"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       16
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 18
+  stamp: 
+    secs: 1367
+    nsecs:  72000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /gazebo/parameter_updates"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       17
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 19
+  stamp: 
+    secs: 1367
+    nsecs:  73000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /bumper_vals"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       18
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 20
+  stamp: 
+    secs: 1367
+    nsecs:  74000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /scan"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       19
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 21
+  stamp: 
+    secs: 1367
+    nsecs:  76000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /battery/status"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       20
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 22
+  stamp: 
+    secs: 1367
+    nsecs:  77000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /battery/voltage"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       21
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 23
+  stamp: 
+    secs: 1367
+    nsecs:  78000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /imu/data"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       22
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 24
+  stamp: 
+    secs: 1367
+    nsecs:  79000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /imu/data/bias"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       23
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 25
+  stamp: 
+    secs: 1367
+    nsecs:  80000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /imu/data/accel/parameter_descriptions"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       24
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 26
+  stamp: 
+    secs: 1367
+    nsecs:  81000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /imu/data/accel/parameter_updates"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       25
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 27
+  stamp: 
+    secs: 1367
+    nsecs:  81000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /imu/data/rate/parameter_descriptions"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       26
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 28
+  stamp: 
+    secs: 1367
+    nsecs:  83000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /imu/data/rate/parameter_updates"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       27
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 29
+  stamp: 
+    secs: 1367
+    nsecs:  84000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /imu/data/yaw/parameter_descriptions"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       28
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 30
+  stamp: 
+    secs: 1367
+    nsecs:  85000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /imu/data/yaw/parameter_updates"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       29
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 31
+  stamp: 
+    secs: 1367
+    nsecs:  86000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /navsat/fix"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       30
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 32
+  stamp: 
+    secs: 1367
+    nsecs:  87000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /navsat/vel"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       31
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 33
+  stamp: 
+    secs: 1367
+    nsecs:  88000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /navsat/fix/position/parameter_descriptions"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       32
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 34
+  stamp: 
+    secs: 1367
+    nsecs:  89000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /navsat/fix/position/parameter_updates"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       33
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 35
+  stamp: 
+    secs: 1367
+    nsecs:  90000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /navsat/fix/velocity/parameter_descriptions"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       34
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 36
+  stamp: 
+    secs: 1367
+    nsecs:  91000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /navsat/fix/velocity/parameter_updates"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       35
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 37
+  stamp: 
+    secs: 1367
+    nsecs: 110000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /navsat/fix/status/parameter_descriptions"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       36
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 38
+  stamp: 
+    secs: 1367
+    nsecs: 112000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /navsat/fix/status/parameter_updates"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       37
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 39
+  stamp: 
+    secs: 1367
+    nsecs: 113000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /joint_states"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       38
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 40
+  stamp: 
+    secs: 1367
+    nsecs: 114000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /husky_velocity_controller/odom"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       39
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 41
+  stamp: 
+    secs: 1367
+    nsecs: 115000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /husky_velocity_controller/parameter_descriptions"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       40
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 42
+  stamp: 
+    secs: 1367
+    nsecs: 116000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /husky_velocity_controller/parameter_updates"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       41
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 43
+  stamp: 
+    secs: 1367
+    nsecs: 117000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /cmd_vel"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       42
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 44
+  stamp: 
+    secs: 1367
+    nsecs: 118000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/current_goal"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       43
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 45
+  stamp: 
+    secs: 1367
+    nsecs: 119000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/goal"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       44
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 46
+  stamp: 
+    secs: 1367
+    nsecs: 121000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/global_costmap/obstacles_laser/parameter_descriptions"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       45
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 47
+  stamp: 
+    secs: 1367
+    nsecs: 122000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/global_costmap/obstacles_laser/parameter_updates"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       46
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 48
+  stamp: 
+    secs: 1367
+    nsecs: 123000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/global_costmap/inflation/parameter_descriptions"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       47
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 49
+  stamp: 
+    secs: 1367
+    nsecs: 124000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/global_costmap/inflation/parameter_updates"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       48
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 50
+  stamp: 
+    secs: 1367
+    nsecs: 125000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/global_costmap/footprint"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       49
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 51
+  stamp: 
+    secs: 1367
+    nsecs: 126000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/global_costmap/costmap"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       50
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 52
+  stamp: 
+    secs: 1367
+    nsecs: 128000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/global_costmap/costmap_updates"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       51
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 53
+  stamp: 
+    secs: 1367
+    nsecs: 129000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/global_costmap/parameter_descriptions"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       52
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 54
+  stamp: 
+    secs: 1367
+    nsecs: 130000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/global_costmap/parameter_updates"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       53
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 55
+  stamp: 
+    secs: 1367
+    nsecs: 131000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/NavfnROS/plan"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       54
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 56
+  stamp: 
+    secs: 1367
+    nsecs: 132000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/local_costmap/obstacles_laser/parameter_descriptions"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       55
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 57
+  stamp: 
+    secs: 1367
+    nsecs: 133000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/local_costmap/obstacles_laser/parameter_updates"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       56
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 58
+  stamp: 
+    secs: 1367
+    nsecs: 134000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/local_costmap/inflation/parameter_descriptions"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       57
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 59
+  stamp: 
+    secs: 1367
+    nsecs: 136000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/local_costmap/inflation/parameter_updates"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       58
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 60
+  stamp: 
+    secs: 1367
+    nsecs: 137000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/local_costmap/footprint"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       59
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 61
+  stamp: 
+    secs: 1367
+    nsecs: 138000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/local_costmap/costmap"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       60
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 62
+  stamp: 
+    secs: 1367
+    nsecs: 139000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/local_costmap/costmap_updates"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       61
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 63
+  stamp: 
+    secs: 1367
+    nsecs: 140000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/local_costmap/parameter_descriptions"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       62
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 64
+  stamp: 
+    secs: 1367
+    nsecs: 142000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/local_costmap/parameter_updates"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       63
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 65
+  stamp: 
+    secs: 1367
+    nsecs: 143000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/DWAPlannerROS/global_plan"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       64
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 66
+  stamp: 
+    secs: 1367
+    nsecs: 144000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/DWAPlannerROS/local_plan"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       65
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 67
+  stamp: 
+    secs: 1367
+    nsecs: 145000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/DWAPlannerROS/cost_cloud"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       66
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 68
+  stamp: 
+    secs: 1367
+    nsecs: 146000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/DWAPlannerROS/trajectory_cloud"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       67
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 69
+  stamp: 
+    secs: 1367
+    nsecs: 149000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/DWAPlannerROS/parameter_descriptions"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       68
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 70
+  stamp: 
+    secs: 1367
+    nsecs: 150000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/DWAPlannerROS/parameter_updates"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       69
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 71
+  stamp: 
+    secs: 1367
+    nsecs: 151000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/result"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       70
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 72
+  stamp: 
+    secs: 1367
+    nsecs: 152000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/feedback"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       71
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 73
+  stamp: 
+    secs: 1367
+    nsecs: 153000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/status"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       72
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 74
+  stamp: 
+    secs: 1367
+    nsecs: 154000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/parameter_descriptions"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       73
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 75
+  stamp: 
+    secs: 1367
+    nsecs: 155000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/parameter_updates"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       74
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 76
+  stamp: 
+    secs: 1367
+    nsecs: 157000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /collisions"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       75
+# timestamp (sec): 1367.159000000
+# - - -
+header: 
+  seq: 77
+  stamp: 
+    secs: 1367
+    nsecs: 158000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /battery/consumer/0"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       76
+# timestamp (sec): 1367.250000000
+# - - -
+header: 
+  seq: 8
+  stamp: 
+    secs: 1352
+    nsecs:  98000000
+  frame_id: ''
+level: 2
+name: "/base_controller_spawner"
+msg: "Started controllers: husky_joint_publisher, husky_velocity_controller"
+file: "spawner"
+function: "main"
+line: 206
+topics: 
+  - /clock
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       77
+# timestamp (sec): 1372.160000000
+# - - -
+header: 
+  seq: 78
+  stamp: 
+    secs: 1372
+    nsecs: 160000000
+  frame_id: ''
+level: 2
+name: "/my_bag"
+msg: "Subscribing to /move_base/cancel"
+file: "/tmp/binarydeb/ros-noetic-rosbag-1.15.14/src/recorder.cpp"
+function: "shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe"
+line: 255
+topics: 
+  - /rosout
+
+# =======================================
+# topic:           /rosout
+# msg_count:       78
+# timestamp (sec): 1372.418000000
+# - - -
+header: 
+  seq: 15
+  stamp: 
+    secs: 1372
+    nsecs: 418000000
+  frame_id: ''
+level: 2
+name: "/move_base"
+msg: "Got new plan"
+file: "/tmp/binarydeb/ros-noetic-dwa-local-planner-1.17.1/src/dwa_planner_ros.cpp"
+function: "DWAPlannerROS::setPlan"
+line: 150
+topics: 
+  - /rosout
+  - /cmd_vel
+  - /move_base/current_goal
+  - /move_base/goal
+  - /move_base/global_costmap/obstacles_laser/parameter_descriptions
+  - /move_base/global_costmap/obstacles_laser/parameter_updates
+  - /move_base/global_costmap/inflation/parameter_descriptions
+  - /move_base/global_costmap/inflation/parameter_updates
+  - /move_base/global_costmap/footprint
+  - /move_base/global_costmap/costmap
+  - /move_base/global_costmap/costmap_updates
+  - /move_base/global_costmap/parameter_descriptions
+  - /move_base/global_costmap/parameter_updates
+  - /move_base/NavfnROS/plan
+  - /move_base/local_costmap/obstacles_laser/parameter_descriptions
+  - /move_base/local_costmap/obstacles_laser/parameter_updates
+  - /move_base/local_costmap/inflation/parameter_descriptions
+  - /move_base/local_costmap/inflation/parameter_updates
+  - /move_base/local_costmap/footprint
+  - /move_base/local_costmap/costmap
+  - /move_base/local_costmap/costmap_updates
+  - /move_base/local_costmap/parameter_descriptions
+  - /move_base/local_costmap/parameter_updates
+  - /move_base/DWAPlannerROS/global_plan
+  - /move_base/DWAPlannerROS/local_plan
+  - /move_base/DWAPlannerROS/cost_cloud
+  - /move_base/DWAPlannerROS/trajectory_cloud
+  - /move_base/DWAPlannerROS/parameter_descriptions
+  - /move_base/DWAPlannerROS/parameter_updates
+  - /move_base/result
+  - /move_base/feedback
+  - /move_base/status
+  - /move_base/parameter_descriptions
+  - /move_base/parameter_updates
+
+# =======================================
+# topic:           /rosout
+# msg_count:       79
+# timestamp (sec): 1384.019000000
+# - - -
+header: 
+  seq: 16
+  stamp: 
+    secs: 1384
+    nsecs:  18000000
+  frame_id: ''
+level: 2
+name: "/move_base"
+msg: "Goal reached"
+file: "/tmp/binarydeb/ros-noetic-dwa-local-planner-1.17.1/src/dwa_planner_ros.cpp"
+function: "DWAPlannerROS::isGoalReached"
+line: 165
+topics: 
+  - /rosout
+  - /cmd_vel
+  - /move_base/current_goal
+  - /move_base/goal
+  - /move_base/global_costmap/obstacles_laser/parameter_descriptions
+  - /move_base/global_costmap/obstacles_laser/parameter_updates
+  - /move_base/global_costmap/inflation/parameter_descriptions
+  - /move_base/global_costmap/inflation/parameter_updates
+  - /move_base/global_costmap/footprint
+  - /move_base/global_costmap/costmap
+  - /move_base/global_costmap/costmap_updates
+  - /move_base/global_costmap/parameter_descriptions
+  - /move_base/global_costmap/parameter_updates
+  - /move_base/NavfnROS/plan
+  - /move_base/local_costmap/obstacles_laser/parameter_descriptions
+  - /move_base/local_costmap/obstacles_laser/parameter_updates
+  - /move_base/local_costmap/inflation/parameter_descriptions
+  - /move_base/local_costmap/inflation/parameter_updates
+  - /move_base/local_costmap/footprint
+  - /move_base/local_costmap/costmap
+  - /move_base/local_costmap/costmap_updates
+  - /move_base/local_costmap/parameter_descriptions
+  - /move_base/local_costmap/parameter_updates
+  - /move_base/DWAPlannerROS/global_plan
+  - /move_base/DWAPlannerROS/local_plan
+  - /move_base/DWAPlannerROS/cost_cloud
+  - /move_base/DWAPlannerROS/trajectory_cloud
+  - /move_base/DWAPlannerROS/parameter_descriptions
+  - /move_base/DWAPlannerROS/parameter_updates
+  - /move_base/result
+  - /move_base/feedback
+  - /move_base/status
+  - /move_base/parameter_descriptions
+  - /move_base/parameter_updates
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Total messages found:               79
+#
+#    /rosout:                         79
+#
+# DONE.
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

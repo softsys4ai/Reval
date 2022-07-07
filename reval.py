@@ -1,174 +1,100 @@
 import os
+import shutil
+import signal
 import subprocess
 import time
-import argparse
+from turtle import bgcolor
 from tqdm import tqdm
+from utils.utils import bcolors, Loader, description, KeyboardInterrupt
+from utils.arg_parse import command
 
-log = subprocess.check_call("mkdir -p log", cwd="src/benchmark/", shell=True)
+
+if not os.path.exists('src/benchmark/log'):
+    os.makedirs('src/benchmark/log')
 
 color = 'white'
 ASCII = '.#'
 
-parser = argparse.ArgumentParser(description='Reval is an open-source framework to evaluate the performace of Robotics platforms. Currently it only supports Husky platform. The useres can evalute the performance of a mission for a given gazebo envirnoment (or on their own gazebo envirnment) for different configurations in an automated fashion and log the results. Reveal records the rosbag and evalutes all ros topics from the rosbag file.',
-                                formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-parser.add_argument('-v', '-viz', help='Turn on/off visualization of gazebo and rviz', default='True', metavar='')
-parser.add_argument('-e', '-epoch', help='Number of data-points to be recorded', type=int, default=1, metavar='')
-args = parser.parse_args()
+def reval():
+    global loading
+    loading = False
 
-class bcolors:
-    HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKCYAN = '\033[96m'
-    OKGREEN = '\033[92m'
-    CGREEN  = '\33[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
+    battery_collision = subprocess.check_call("./husky_battery_bumper.sh '%s'", cwd="src/benchmark/service", shell=True)
+    set_config = subprocess.check_call("python set_config.py '%s'", cwd="src/benchmark/", shell=True)
+    for i in tqdm(range(5),  desc="Set config method=random", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}', leave=False): 
+        time.sleep(1)
 
-print(bcolors.CGREEN + r"""
-  _____                 _        
- |  __ \               | |       
- | |__) |_____   ____ _| |       
- |  _  // _ \ \ / / _` | |       
- | | \ \  __/\ V / (_| | |       
- |_|  \_\___| \_/ \__,_|_|       
-              _  _____           
-        /\   (_)/ ____|          
-       /  \   _| (___  _   _ ___ 
-      / /\ \ | |\___ \| | | / __|
-     / ____ \| |____) | |_| \__ \
-    /_/    \_\_|_____/ \__, |___/
-                        __/ |    
-                       |___/     
---------------v1.1-------------------    
+    rosbag = subprocess.check_call("gnome-terminal -- ./ros_record.sh '%s'", cwd="src/benchmark/service", shell=True)
+    calculate_distance = subprocess.check_call("gnome-terminal -- python calculate_distance_traveled.py '%s'", cwd="src/benchmark", shell=True)
+    for i in tqdm(range(5),  desc="Data logger", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}', leave=False): 
+        time.sleep(1)
 
-""" + bcolors.ENDC)
+    reval.loader = Loader("Mission in progress...", bcolors.CGREEN + "" + bcolors.ENDC, 0.05).start()
+    loading = True
+    nav2d_goal = subprocess.check_call("python mission.py '%s'", cwd="src/benchmark/", shell=True)
+    reval.loader.stop() 
+    loading = False
+    print(bcolors.CGREEN + "Mission Done!" + bcolors.ENDC)
+    for i in tqdm(range(10),  desc="Finishing simulation", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}', leave=False):
+        time.sleep(1)
 
- 
-for i in tqdm(range(args.e), colour="green", desc="Epoch", bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'):
+    kill_rosnode = subprocess.check_call("./kill_rosnode.sh &>/dev/null", cwd="src/benchmark/service", shell=True)
 
-    if args.v == 'True' or args.v == 'true':
- 
-        husky_gazebo = subprocess.check_call("./husky_gazebo.sh '%s'", cwd="src/benchmark/", shell=True)
-        for i in tqdm(range(8), desc="Launching husky_gazebo", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'):
-            time.sleep(1)
-        
-        husky_mb = subprocess.check_call("./husky_movebase.sh '%s'", cwd="src/benchmark/", shell=True)
-        for i in tqdm(range(3),  desc="Launching husky_MobeBase", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'): 
-            time.sleep(1)
+    for i in tqdm(range(5),  desc="Generating logs", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}', leave=False):
+        time.sleep(1)
 
-        husky_rviz = subprocess.check_call("./husky_rviz.sh '%s'", cwd="src/benchmark/", shell=True)
-        for i in tqdm(range(10),  desc="Launching husky_rviz", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'): 
-            time.sleep(1)
+    reval.loader = Loader("Evaluating logs...", bcolors.HEADER + "" + bcolors.ENDC, 0.05).start()
+    loading = True    
+    eval = subprocess.check_call("./eval.sh '%s'", cwd="src/benchmark/service", shell=True)
+    reval.loader.stop()
+    loading = False  
+    positinal_metrics = subprocess.check_call("python positional_error.py '%s'", cwd="src/benchmark/", shell=True)
+    evaluation_results = subprocess.check_call("python evaluation_results.py '%s'", cwd="src/benchmark/", shell=True)  
 
-        set_config = subprocess.check_call("python set_config.py '%s'", cwd="src/benchmark/", shell=True)
-        for i in tqdm(range(5),  desc="Set config method=random", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'): 
-            time.sleep(1)
+    # path = "src/benchmark/log"
+    # if os.path.isdir(path):
+    #     shutil.rmtree(path)
 
 
-        rosbag = subprocess.check_call("gnome-terminal -- ./ros_record.sh '%s'", cwd="src/benchmark/", shell=True)
-        calculate_distance = subprocess.check_call("gnome-terminal -- python calculate_distance_traveled.py '%s'", cwd="src/benchmark/", shell=True)
-        for i in tqdm(range(5),  desc="Data logger", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'): 
-            time.sleep(1)
-        print("")
 
-        nav2d_goal = subprocess.check_call("python mission.py '%s'", cwd="src/benchmark/", shell=True)
-        for i in tqdm(range(10),  desc="Finishing simulation", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'):
-            time.sleep(1)
+if __name__== '__main__':
+    try:
+        signal.signal(signal.SIGINT, KeyboardInterrupt.signal_handler)
+        cursor_off = subprocess.check_call("tput civis", shell=True)
 
-  
-        print("Simulation finished!")
-        print("--------------------")
+        for i in tqdm(range(command.args.e), colour="green", desc="Epoch", bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'):
+            if command.args.v == 'On' or command.args.v == 'on':
+                husky_gazebo = subprocess.check_call("./husky_gazebo.sh '%s'", cwd="src/benchmark/service", shell=True)
+                for i in tqdm(range(8), desc="Launching husky_gazebo", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}', leave=False):
+                    time.sleep(1)
+                husky_mb = subprocess.check_call("./husky_movebase.sh '%s'", cwd="src/benchmark/service", shell=True)
+                for i in tqdm(range(3),  desc="Launching husky_MobeBase", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}', leave=False): 
+                    time.sleep(1)
+                husky_rviz = subprocess.check_call("./husky_rviz.sh '%s'", cwd="src/benchmark/service", shell=True)
+                for i in tqdm(range(10),  desc="Launching husky_rviz", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}', leave=False): 
+                    time.sleep(1)                    
+                reval()    
+
+            if command.args.v == 'Off' or command.args.v == 'off':
+                husky_gazebo = subprocess.check_call("./husky_gazebo_nogui.sh '%s'", cwd="src/benchmark/service", shell=True)
+                for i in tqdm(range(8), desc="Launching husky_gazebo", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}', leave=False):
+                    time.sleep(1)
+                husky_mb = subprocess.check_call("./husky_movebase.sh '%s'", cwd="src/benchmark/service", shell=True)
+                for i in tqdm(range(3),  desc="Launching husky_MobeBase", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}', leave=False): 
+                    time.sleep(1)                    
+                reval()       
+        cursor_on = subprocess.check_call("tput cvvis", shell=True)
+
+
+    except:
+        if loading == True:
+            reval.loader.stop()    
         print(bcolors.WARNING + "Killing rosnodes and roslaunch" + bcolors.ENDC)
-
-        kill_rosnode = subprocess.check_call("./kill_rosnode.sh '%s'", cwd="src/benchmark/", shell=True)
-
-        for i in tqdm(range(5),  desc="Generating logs", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'):
+        kill_rosnode = subprocess.check_call("./kill_rosnode.sh '%s'", cwd="src/benchmark/service", shell=True)        
+        for i in tqdm(range(5),  desc="Closing everything", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'):
             time.sleep(1)
-
-        eval = subprocess.check_call("gnome-terminal -- ./eval.sh '%s'", cwd="src/benchmark/", shell=True)
-        positinal_metrics = subprocess.check_call("python positional_error.py '%s'", cwd="src/benchmark/", shell=True)
-        for i in tqdm(range(15),  desc="Evaluating logs", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'):
-            time.sleep(1)
-        
-        print("")
- 
-        evaluation_results = subprocess.check_call("python evaluation_results.py '%s'", cwd="src/benchmark/", shell=True)
-    
-
-
-    if args.v == 'False' or args.v == 'false':
-        husky_gazebo = subprocess.check_call("./husky_gazebo_nogui.sh '%s'", cwd="src/benchmark/", shell=True)
-        for i in tqdm(range(8), desc="Launching husky_gazebo", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'):
-            time.sleep(1)
-    
-        husky_mb = subprocess.check_call("./husky_movebase.sh '%s'", cwd="src/benchmark/", shell=True)
-        for i in tqdm(range(3),  desc="Launching husky_MoveBase", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'): 
-            time.sleep(1)
-
-
-        set_config = subprocess.check_call("python set_config.py '%s'", cwd="src/benchmark/", shell=True)
-        for i in tqdm(range(5),  desc="Set config method=random", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'): 
-            time.sleep(1)
-
-
-        rosbag = subprocess.check_call("gnome-terminal -- ./ros_record.sh '%s'", cwd="src/benchmark/", shell=True)
-        calculate_distance = subprocess.check_call("gnome-terminal -- python calculate_distance_traveled.py '%s'", cwd="src/benchmark/", shell=True)
-        for i in tqdm(range(5),  desc="Data logger", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'): 
-            time.sleep(1)
-        print("")
-
-        nav2d_goal = subprocess.check_call("python mission.py '%s'", cwd="src/benchmark/", shell=True)
-        for i in tqdm(range(10),  desc="Finishing simulation", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'):
-            time.sleep(1)
-
-  
-        print("Simulation finished!")
-        print("--------------------")
-        print(bcolors.WARNING + "Killing rosnodes and roslaunch" + bcolors.ENDC)
-
-        kill_rosnode = subprocess.check_call("./kill_rosnode.sh '%s'", cwd="src/benchmark/", shell=True)
-
-        for i in tqdm(range(5),  desc="Generating logs", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'):
-            time.sleep(1)
-
-        eval = subprocess.check_call("gnome-terminal -- ./eval.sh '%s'", cwd="src/benchmark/", shell=True)
-        positinal_metrics = subprocess.check_call("python positional_error.py '%s'", cwd="src/benchmark/", shell=True)
-        for i in tqdm(range(15),  desc="Evaluating logs", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'):
-            time.sleep(1)
-        
-        print("")
-        
-        evaluation_results = subprocess.check_call("python evaluation_results.py '%s'", cwd="src/benchmark/", shell=True)
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        print(bcolors.FAIL + "Mission Failed!" + bcolors.ENDC)    
+        # path = "src/benchmark/log"
+        # if os.path.isdir(path):
+        #     shutil.rmtree(path)
+        cursor_on = subprocess.check_call("tput cvvis", shell=True)  

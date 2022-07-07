@@ -1,7 +1,7 @@
 ![visitor badge](https://visitor-badge.glitch.me/badge?page_id=abirhossen786.486687358-badge)
 
 # Reval
-Reval is an open-source framework to evaluate the performace of Robotics platforms. Currently it only supports [Husky platform](https://clearpathrobotics.com/husky-unmanned-ground-vehicle-robot/). The useres can evalute the performance of a mission for a given gazebo envirnoment (or on their own gazebo envirnment) for different configurations in an automated fashion and log the results. Reveal records the [rosbag](http://wiki.ros.org/rosbag) and evalutes all ros topics from the rosbag file. In addition, Reval supports the following metrics to evaluate the quality of a mission:
+Reval is an open-source framework to evaluate the performance of Robotics platforms. Currently it only supports [Husky platform](https://clearpathrobotics.com/husky-unmanned-ground-vehicle-robot/). The useres can evalute the performance of a mission for a given gazebo envirnoment (or on their own gazebo envirnment) for different configurations in an automated fashion and log the results. Reveal records the [rosbag](http://wiki.ros.org/rosbag) and evalutes all ros topics from the rosbag file. In addition, Reval supports the following metrics to evaluate the quality of a mission:
 
 **Evaluation metrics**
 Metrics         |    Description    |
@@ -14,11 +14,14 @@ RCU             | # of ClearCostMaps recovery executed for unstuck robot
 RCL             | # of ClearCostMaps layer recovery executed
 IRC             | # of invalid rotation cmd
 ERG             | # of error rotating on the goal
-DRMS            | The square root of the average of the squared horizontal position errors, <img src="https://latex.codecogs.com/svg.image?\inline&space;\small&space;DRMS=\sqrt{\sigma_x^2&plus;\sigma_y^2}" title="https://latex.codecogs.com/svg.image?\inline \small DRMS=\sqrt{\sigma_x^2+\sigma_y^2}" /> ;   where standard deviation of the delta x and y,  <img src="https://latex.codecogs.com/svg.image?\inline&space;\small&space;\bg{white}\sigma&space;=&space;\sqrt{\frac{1}{N}\sum_{i=1}^N(x_i-\mu)^2}" title="https://latex.codecogs.com/svg.image?\inline \small \bg{white}\sigma = \sqrt{\frac{1}{N}\sum_{i=1}^N(x_i-\mu)^2}" />. Probability of 65%
-2DRMS           | Twice the Distance Root Mean Squared (DRMS) of the horizontal position error, <img src="https://latex.codecogs.com/svg.image?\inline&space;\small&space;2DRMS=2\sqrt{\sigma_x^2&plus;\sigma_y^2}" title="https://latex.codecogs.com/svg.image?\inline \small 2DRMS=2\sqrt{\sigma_x^2+\sigma_y^2}" />. Probability of 95%
-CPE             | The radius of circle centered at the true position, containing the position estimate with probability of 50%. <img src="https://latex.codecogs.com/svg.image?\inline&space;\small&space;CEP=0.59(\sigma_x&plus;\sigma_y)" title="https://latex.codecogs.com/svg.image?\inline \small CEP=0.59(\sigma_x+\sigma_y)" />
-RNS             | robustness in narrow spaces, <img src="https://latex.codecogs.com/svg.image?\inline&space;\small&space;RNS=\frac{1}{N_{s}}\sum_{i=0}^{N_{s}}&space;(passed_{Ns})" title="https://latex.codecogs.com/svg.image?\inline \small RNS=\frac{1}{N_{s}}\sum_{i=0}^{N_{s}} (passed_{Ns})" />  ; where Ns is the total narrow spaces in the gazebo environment, and passed_Ns is the narrow spaces that the robot successfully crossed.
+DRMS            | The square root of the average of the squared horizontal position errors, <img src="https://latex.codecogs.com/png.image?\inline&space;\small&space;\dpi{110}\bg{white}DRMS=\sqrt{\sigma_x^2&plus;\sigma_y^2}" title="https://latex.codecogs.com/png.image?\inline \small \dpi{110}\bg{white}DRMS=\sqrt{\sigma_x^2&plus;\sigma_y^2}" /> ;   where standard deviation of the delta x and y,  <img src="https://latex.codecogs.com/png.image?\inline&space;\small&space;\dpi{120}\bg{white}\sigma&space;=&space;\sqrt{\frac{1}{N}\sum_{i=1}^N(x_i-\mu)^2}" title="https://latex.codecogs.com/png.image?\inline \small \dpi{120}\bg{white}\sigma = \sqrt{\frac{1}{N}\sum_{i=1}^N(x_i-\mu)^2}" />. Probability of 65%
+2DRMS           | Twice the Distance Root Mean Squared (DRMS) of the horizontal position error, <img src="https://latex.codecogs.com/png.image?\inline&space;\small&space;\dpi{120}\bg{white}2DRMS=2\sqrt{\sigma_x^2&plus;\sigma_y^2}" title="https://latex.codecogs.com/png.image?\inline \small \dpi{120}\bg{white}2DRMS=2\sqrt{\sigma_x^2&plus;\sigma_y^2}" />. Probability of 95%
+CPE             | The radius of circle centered at the true position, containing the position estimate with probability of 50%. <img src="https://latex.codecogs.com/png.image?\inline&space;\small&space;\dpi{120}\bg{white}CEP=0.59(\sigma_x&plus;\sigma_y)" title="https://latex.codecogs.com/png.image?\inline \small \dpi{120}\bg{white}CEP=0.59(\sigma_x+\sigma_y)" />
+ED              | Euclidean distance between actual goal location and the location the robot reached. <img src="https://latex.codecogs.com/png.image?\inline&space;\small&space;\dpi{110}\bg{white}d&space;=&space;\sqrt{(x_2&space;-&space;x_1)^2&space;&plus;&space;(y_2&space;-&space;y_1)^2}" title="https://latex.codecogs.com/png.image?\inline \small \dpi{110}\bg{white}d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}" />
+RNS             | robustness in narrow spaces, <img src="https://latex.codecogs.com/png.image?\inline&space;\small&space;\dpi{120}\bg{white}RNS=\frac{1}{N_{s}}\sum_{i=0}^{N_{s}}&space;(passed_{Ns})" title="https://latex.codecogs.com/png.image?\inline \small \dpi{120}\bg{white}RNS=\frac{1}{N_{s}}\sum_{i=0}^{N_{s}}&space;(passed_{Ns})" /> ; where Ns is the total narrow spaces in the gazebo environment, and passed_Ns is the narrow spaces that the robot successfully crossed.
 DT             | total distance traveled during a mission
+BP             | battery percentage. For more details: [Gazebo-ROS battery plugin](src/husky_ws/src/gazebo_ros_battery/#gazebo-ros-battery-plugin)
+Col            | number of collisions in a mission
 MT             | time taken to complete a mission
 MS             | mission success. Example: if the robot successfully reached point A to B
 
@@ -119,7 +122,9 @@ N.b. If you face `Catkin command not found`, install `sudo apt-get install pytho
 
 If everything is correct, you should see something similar to the following output
 
-![catkin_build](https://user-images.githubusercontent.com/73362969/165857662-dd52c4d0-8a00-45f3-bdfc-1ceb9c9bde62.jpg)
+<!-- ![catkin_build](https://user-images.githubusercontent.com/73362969/165857662-dd52c4d0-8a00-45f3-bdfc-1ceb9c9bde62.jpg) -->
+![Catkin build](https://user-images.githubusercontent.com/73362969/167683326-92265a48-f735-4cd1-a44e-db4c67535629.gif)
+
 
 
 ## Running Reval
@@ -138,20 +143,27 @@ python reval.py
 ```
 optional arguments:
   -h, --help    show this help message and exit
-  -v , -viz     turn on/off visualization of gazebo and rviz (default: True)
+  -v , -viz     turn on/off visualization of gazebo and rviz (default: On)
   -e , -epoch   number of data-points to be recorded (default: 1)
 ```
-examaple: `python reval.py -v false -e 10` 
+examaple: `python reval.py -v off -e 10` 
 
 ### Demo
-
+Visualization off:
 <p align="center">
-  <img src= "https://user-images.githubusercontent.com/73362969/167279446-c1727093-1c2f-4f3f-92a2-40ecee5de599.png"
+  <img src= "https://user-images.githubusercontent.com/73362969/167681739-5e100673-4bdd-4988-9da1-894abf29cf3e.gif"
 </p>
 
-Reval in action:
-  
-https://user-images.githubusercontent.com/73362969/167276835-6f514a3a-c7ce-45b9-b9fd-ad6223582792.mp4
+<!-- <p align="center">
+  <img src= "https://user-images.githubusercontent.com/73362969/167279446-c1727093-1c2f-4f3f-92a2-40ecee5de599.png"
+</p> -->
+
+Visualization on:
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/73362969/167684493-9181c890-4ec4-4503-8dc1-ba59fffc19e4.gif"
+</p>  
+
+<!-- https://user-images.githubusercontent.com/73362969/167276835-6f514a3a-c7ce-45b9-b9fd-ad6223582792.mp4 -->
 
 ## Customizations
 - To define your custom configuration options: [Set Configuration](/src/benchmark/README.md#cahnging-configuration-options)
