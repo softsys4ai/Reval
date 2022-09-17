@@ -28,7 +28,7 @@ def reval():
     calculate_distance = subprocess.check_call("gnome-terminal -- python calculate_distance_traveled.py '%s'", cwd="src/benchmark", shell=True)
     for i in tqdm(range(5),  desc="Data logger", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}', leave=False): 
         time.sleep(1)
-
+    print("")
     reval.loader = Loader("Mission in progress...", bcolors.CGREEN + "" + bcolors.ENDC, 0.05).start()
     loading = True
     nav2d_goal = subprocess.check_call("python mission.py '%s'", cwd="src/benchmark/", shell=True)
@@ -82,7 +82,8 @@ if __name__== '__main__':
                 husky_mb = subprocess.check_call("./husky_movebase.sh '%s'", cwd="src/benchmark/service", shell=True)
                 for i in tqdm(range(3),  desc="Launching husky_MobeBase", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}', leave=False): 
                     time.sleep(1)                    
-                reval()       
+                reval()    
+                time.sleep(5)   
         cursor_on = subprocess.check_call("tput cvvis", shell=True)
 
 

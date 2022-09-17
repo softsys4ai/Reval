@@ -9,7 +9,7 @@ class BatteryConsumer:
         rospy.init_node("battery_consumer")
         cmd_vel_subscriber = rospy.Subscriber("/cmd_vel", Twist, self.cmd_callback)
         self.battery_consumer_0 = rospy.Publisher("/battery/consumer/0", Float32, queue_size=1)
-        self.moving = Float32(data=50.0)
+        self.moving = Float32(data=40.0)
         self.idle = Float32(data=5.0)
 
     def cmd_callback(self, msg):

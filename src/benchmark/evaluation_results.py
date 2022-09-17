@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+from datetime import datetime
 from tabulate import tabulate
 from goals import *
 
@@ -273,14 +274,14 @@ dataS = [cost_scaling_factor_g, update_frequency_g, publish_frequency_g, transfo
         DWA_failed, DWA_newplan, DWA_invalid_trajectory, rotate_recovery_executed,
         clearCostMaps_ur_recovery_executed, ClearCostMaps_layer_recovery_executed, invalid_rotation_cmd, 
         error_rotating_goal, two2Drms, Drms, CPE, euclidean_distance, RNS, distance_traveled, collisions, mission_time, battery_percentage, mission_success]
-headerS = ["Cost scaling factor global", "Update frequency global", "Publish frequency gloabl", "Transform tolerance global",
-            "Footprint padding global", "Combination method global", "Cost scaling factor local", "Inflation radius local",
-            "Update frequency local", "Publish frequency local", "Combination method local", "Transform tolerance local",
-            "Footprint padding local", "Path distance bias", "Goal distance bias", "Occdist scale", "Stop time buffer",
-            "yaw goal tolerance", "xy goal tolerance", "min vel_x",
-            "DWA failed", "DWA new plan", "DWA invalid trajectory", "Rotate recovery executed", "ClearCostMaps unstuck recovery executed", 
-            "ClearCostMaps layer recovery executed", "Invalid rotation cmd", "Error rotating goal","2DRMS","DRMS","CPE","Euclideanddistance","RNS", "Traveled distance", 
-            "Collisions","Mission time", "Battery percentage", "Mission success"]
+headerS = ["Cost_scaling_factor global", "Update_frequency_global", "Publish_frequency_gloabl", "Transform_tolerance_global",
+            "Footprint_padding_global", "Combination_method_global", "Cost_scaling_factor_local", "Inflation_radius_local",
+            "Update_frequency_local", "Publish_frequency_local", "Combination_method_local", "Transform_tolerance_local",
+            "Footprint_padding_local", "Path_distance_bias", "Goal_distance_bias", "Occdist_scale", "Stop_time_buffer",
+            "yaw_goal_tolerance", "xy_goal_tolerance", "min_vel_x",
+            "DWA_failed", "DWA_new_plan", "DWA_invalid_trajectory", "Rotate_recovery_executed", "ClearCostMaps_unstuck_recovery_executed", 
+            "ClearCostMaps_layer_recovery_executed", "Invalid_rotation_cmd", "Error_rotating_goal","2DRMS","DRMS","CPE","Euclidean_distance","RNS", "Traveled_distance", 
+            "Collisions","Mission_time", "Battery_percentage", "Mission_success"]
 
 # For terminal
 df3 = pd.DataFrame(dataT, headersT)
@@ -289,7 +290,10 @@ df3 = df3.T
 # Organizing the csv
 df4 = pd.DataFrame(dataS, headerS)
 df4 = df4.T
-df4.to_csv("../../Evaluation_results.csv", index=False, header=True)
+if not os.path.exists('../../results'):
+    os.makedirs('../../results')
+timestamp = datetime.now().strftime("%Y_%m_%d-%I_%M_%S_%p")
+df4.to_csv(f"../../results/Evaluation_results_{timestamp}.csv", index=False, header=True)
 
 print("")
 #print(bcolors.HEADER + "-----------------------------------------Evaluation results-----------------------------------------" + bcolors.ENDC) 

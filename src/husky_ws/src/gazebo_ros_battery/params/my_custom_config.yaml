@@ -1,7 +1,7 @@
 num_of_consumers: 1
 publish_voltage: True
 technology: 2
-design_capacity: 4.0
+design_capacity: 5.0
 number_of_cells: 6
 nominal_voltage: 24
 full_charge_voltage: 25.2
