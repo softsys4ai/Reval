@@ -274,7 +274,7 @@ dataS = [cost_scaling_factor_g, update_frequency_g, publish_frequency_g, transfo
         DWA_failed, DWA_newplan, DWA_invalid_trajectory, rotate_recovery_executed,
         clearCostMaps_ur_recovery_executed, ClearCostMaps_layer_recovery_executed, invalid_rotation_cmd, 
         error_rotating_goal, two2Drms, Drms, CPE, euclidean_distance, RNS, distance_traveled, collisions, mission_time, battery_percentage, mission_success]
-headerS = ["Cost_scaling_factor global", "Update_frequency_global", "Publish_frequency_gloabl", "Transform_tolerance_global",
+headerS = ["Cost_scaling_factor_global", "Update_frequency_global", "Publish_frequency_global", "Transform_tolerance_global",
             "Footprint_padding_global", "Combination_method_global", "Cost_scaling_factor_local", "Inflation_radius_local",
             "Update_frequency_local", "Publish_frequency_local", "Combination_method_local", "Transform_tolerance_local",
             "Footprint_padding_local", "Path_distance_bias", "Goal_distance_bias", "Occdist_scale", "Stop_time_buffer",
