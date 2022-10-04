@@ -1,5 +1,0 @@
-husky_ws/src/husky/husky_navigation
-/home/abir/Reval_beta/Reval/devel/.private/husky_navigation/cmake.lock /home/abir/Reval_beta/Reval/devel/./cmake.lock
-/home/abir/Reval_beta/Reval/devel/.private/husky_navigation/lib/pkgconfig/husky_navigation.pc /home/abir/Reval_beta/Reval/devel/lib/pkgconfig/husky_navigation.pc
-/home/abir/Reval_beta/Reval/devel/.private/husky_navigation/share/husky_navigation/cmake/husky_navigationConfig-version.cmake /home/abir/Reval_beta/Reval/devel/share/husky_navigation/cmake/husky_navigationConfig-version.cmake
-/home/abir/Reval_beta/Reval/devel/.private/husky_navigation/share/husky_navigation/cmake/husky_navigationConfig.cmake /home/abir/Reval_beta/Reval/devel/share/husky_navigation/cmake/husky_navigationConfig.cmake
