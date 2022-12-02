@@ -3,9 +3,7 @@ cd ..
 
 # Extract /rosout and other topics
 ros_readbagfile log/all_topics.bag /rosout > log/topics.yaml
-ros_readbagfile log/all_topics.bag /battery/status > log/battery_status.yaml
-ros_readbagfile log/all_topics.bag /collisions > log/collisions.yaml
-
+ros_readbagfile log/all_topics.bag /battery_state > log/battery_status.yaml
 sleep 3
 
 # How many times DWA planner failed
@@ -45,5 +43,3 @@ rg 'msg: "Goal reached' log/topics.yaml | sort -V > log/mission_success.txt
 # Battery 
 rg 'percentage: ' log/battery_status.yaml | sort -V > log/battery_percentage.txt
 
-# Collisions 
-rg 'data: ' log/collisions.yaml | sort -V > log/collisions.txt
