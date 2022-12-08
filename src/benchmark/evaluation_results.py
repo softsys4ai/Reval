@@ -127,10 +127,7 @@ voltage_max = 12.2
 first_line = bat_percentage.readline().strip()
 volatge = first_line.replace(skip_word_bp, '')
 volatge = float(volatge)
-print(volatge)
 battery_percentage = round(((volatge - voltage_min) / (voltage_max - voltage_min)) * 100, 2)
-print(battery_percentage)
-# 
 
 # determining mission success
 total_mission_success  = read_mission_success.count(success)
