@@ -1,5 +1,0 @@
-turtlebot3/turtlebot3/turtlebot3_navigation
-/home/abir/Reval_turtlebot3/Reval/devel/.private/turtlebot3_navigation/cmake.lock /home/abir/Reval_turtlebot3/Reval/devel/./cmake.lock
-/home/abir/Reval_turtlebot3/Reval/devel/.private/turtlebot3_navigation/lib/pkgconfig/turtlebot3_navigation.pc /home/abir/Reval_turtlebot3/Reval/devel/lib/pkgconfig/turtlebot3_navigation.pc
-/home/abir/Reval_turtlebot3/Reval/devel/.private/turtlebot3_navigation/share/turtlebot3_navigation/cmake/turtlebot3_navigationConfig.cmake /home/abir/Reval_turtlebot3/Reval/devel/share/turtlebot3_navigation/cmake/turtlebot3_navigationConfig.cmake
-/home/abir/Reval_turtlebot3/Reval/devel/.private/turtlebot3_navigation/share/turtlebot3_navigation/cmake/turtlebot3_navigationConfig-version.cmake /home/abir/Reval_turtlebot3/Reval/devel/share/turtlebot3_navigation/cmake/turtlebot3_navigationConfig-version.cmake

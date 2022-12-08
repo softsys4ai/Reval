@@ -1,6 +1,0 @@
-turtlebot3/turtlebot3_simulations/turtlebot3_fake
-/home/abir/Reval_turtlebot3/Reval/devel/.private/turtlebot3_fake/cmake.lock /home/abir/Reval_turtlebot3/Reval/devel/./cmake.lock
-/home/abir/Reval_turtlebot3/Reval/devel/.private/turtlebot3_fake/lib/turtlebot3_fake/turtlebot3_fake_node /home/abir/Reval_turtlebot3/Reval/devel/lib/turtlebot3_fake/turtlebot3_fake_node
-/home/abir/Reval_turtlebot3/Reval/devel/.private/turtlebot3_fake/lib/pkgconfig/turtlebot3_fake.pc /home/abir/Reval_turtlebot3/Reval/devel/lib/pkgconfig/turtlebot3_fake.pc
-/home/abir/Reval_turtlebot3/Reval/devel/.private/turtlebot3_fake/share/turtlebot3_fake/cmake/turtlebot3_fakeConfig-version.cmake /home/abir/Reval_turtlebot3/Reval/devel/share/turtlebot3_fake/cmake/turtlebot3_fakeConfig-version.cmake
-/home/abir/Reval_turtlebot3/Reval/devel/.private/turtlebot3_fake/share/turtlebot3_fake/cmake/turtlebot3_fakeConfig.cmake /home/abir/Reval_turtlebot3/Reval/devel/share/turtlebot3_fake/cmake/turtlebot3_fakeConfig.cmake

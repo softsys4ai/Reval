@@ -1,6 +1,0 @@
-turtlebot3/turtlebot3_simulations/turtlebot3_gazebo
-/home/abir/Reval_turtlebot3/Reval/devel/.private/turtlebot3_gazebo/cmake.lock /home/abir/Reval_turtlebot3/Reval/devel/./cmake.lock
-/home/abir/Reval_turtlebot3/Reval/devel/.private/turtlebot3_gazebo/lib/turtlebot3_gazebo/turtlebot3_drive /home/abir/Reval_turtlebot3/Reval/devel/lib/turtlebot3_gazebo/turtlebot3_drive
-/home/abir/Reval_turtlebot3/Reval/devel/.private/turtlebot3_gazebo/lib/pkgconfig/turtlebot3_gazebo.pc /home/abir/Reval_turtlebot3/Reval/devel/lib/pkgconfig/turtlebot3_gazebo.pc
-/home/abir/Reval_turtlebot3/Reval/devel/.private/turtlebot3_gazebo/share/turtlebot3_gazebo/cmake/turtlebot3_gazeboConfig-version.cmake /home/abir/Reval_turtlebot3/Reval/devel/share/turtlebot3_gazebo/cmake/turtlebot3_gazeboConfig-version.cmake
-/home/abir/Reval_turtlebot3/Reval/devel/.private/turtlebot3_gazebo/share/turtlebot3_gazebo/cmake/turtlebot3_gazeboConfig.cmake /home/abir/Reval_turtlebot3/Reval/devel/share/turtlebot3_gazebo/cmake/turtlebot3_gazeboConfig.cmake

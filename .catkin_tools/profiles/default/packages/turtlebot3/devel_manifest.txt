@@ -1,2 +1,0 @@
-turtlebot3/turtlebot3/turtlebot3
-/home/abir/Reval_turtlebot3/Reval/devel/.private/turtlebot3/cmake.lock /home/abir/Reval_turtlebot3/Reval/devel/./cmake.lock
