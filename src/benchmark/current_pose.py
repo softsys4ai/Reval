@@ -12,11 +12,11 @@ def GetCurrPose(msg):
     with open('log/cy.txt', 'w') as f:
         f.write(str(cy))
         f.close()        
-    rospy.wait_for_message('/odometry/filtered', Odometry)
+    rospy.wait_for_message('/odom', Odometry)
 
 
 if __name__ == '__main__':
     rospy.init_node('poisition_metrics', anonymous=True)
-    odom_sub = rospy.Subscriber('/odometry/filtered', Odometry, GetCurrPose)
+    odom_sub = rospy.Subscriber('/odom', Odometry, GetCurrPose)
     time.sleep(0.1)
     sys.exit()

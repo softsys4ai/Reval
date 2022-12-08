@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import actionlib
 import rospy
 import time
@@ -8,7 +9,7 @@ from rns import *
 from goals import *
 
 goal = MoveBaseGoal()
-goal.target_pose.header.frame_id = 'odom' 
+goal.target_pose.header.frame_id = 'map' 
 
 def target(x, y, z, w):
     goal.target_pose.pose.position.x = x

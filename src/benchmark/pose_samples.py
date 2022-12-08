@@ -24,7 +24,7 @@ def StoreSamples():
 
 if __name__ == '__main__':
     rospy.init_node('poisition_metrics', anonymous=True)
-    odom_sub = rospy.Subscriber('/odometry/filtered', Odometry, callback)
+    odom_sub = rospy.Subscriber('/odom', Odometry, callback)
     rate = rospy.Rate(0.5)
     rate.sleep()
 

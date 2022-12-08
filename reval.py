@@ -6,7 +6,6 @@ import time
 from turtle import bgcolor
 from tqdm import tqdm
 from utils.utils import bcolors, Loader, description, KeyboardInterrupt
-from utils.arg_parse import command
 
 
 if not os.path.exists('src/benchmark/log'):
@@ -18,9 +17,7 @@ ASCII = '.#'
 def reval():
     global loading
     loading = False
-
-    battery_collision = subprocess.check_call("./husky_battery_bumper.sh '%s'", cwd="src/benchmark/service", shell=True)
-    set_config = subprocess.check_call("python set_config.py '%s'", cwd="src/benchmark/", shell=True)
+    # set_config = subprocess.check_call("python set_config.py '%s'", cwd="src/benchmark/", shell=True)
     for i in tqdm(range(5),  desc="Set config method=random", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}', leave=False): 
         time.sleep(1)
 
@@ -62,28 +59,10 @@ if __name__== '__main__':
         signal.signal(signal.SIGINT, KeyboardInterrupt.signal_handler)
         cursor_off = subprocess.check_call("tput civis", shell=True)
 
-        for i in tqdm(range(command.args.e), colour="green", desc="Epoch", bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'):
-            if command.args.v == 'On' or command.args.v == 'on':
-                husky_gazebo = subprocess.check_call("./husky_gazebo.sh '%s'", cwd="src/benchmark/service", shell=True)
-                for i in tqdm(range(8), desc="Launching husky_gazebo", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}', leave=False):
-                    time.sleep(1)
-                husky_mb = subprocess.check_call("./husky_movebase.sh '%s'", cwd="src/benchmark/service", shell=True)
-                for i in tqdm(range(3),  desc="Launching husky_MobeBase", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}', leave=False): 
-                    time.sleep(1)
-                husky_rviz = subprocess.check_call("./husky_rviz.sh '%s'", cwd="src/benchmark/service", shell=True)
-                for i in tqdm(range(10),  desc="Launching husky_rviz", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}', leave=False): 
-                    time.sleep(1)                    
-                reval()    
-
-            if command.args.v == 'Off' or command.args.v == 'off':
-                husky_gazebo = subprocess.check_call("./husky_gazebo_nogui.sh '%s'", cwd="src/benchmark/service", shell=True)
-                for i in tqdm(range(8), desc="Launching husky_gazebo", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}', leave=False):
-                    time.sleep(1)
-                husky_mb = subprocess.check_call("./husky_movebase.sh '%s'", cwd="src/benchmark/service", shell=True)
-                for i in tqdm(range(3),  desc="Launching husky_MobeBase", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}', leave=False): 
-                    time.sleep(1)                    
-                reval()    
-                time.sleep(5)   
+        turtlebot_nav = subprocess.check_call("./turtlebot3_nav.sh '%s'", cwd="src/benchmark/service", shell=True)
+        for i in tqdm(range(3),  desc="Launching Turtlebot3 navigation", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}', leave=False): 
+            time.sleep(1)                  
+        reval()
         cursor_on = subprocess.check_call("tput cvvis", shell=True)
 
 
@@ -95,7 +74,4 @@ if __name__== '__main__':
         for i in tqdm(range(5),  desc="Closing everything", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'):
             time.sleep(1)
         print(bcolors.FAIL + "Mission Failed!" + bcolors.ENDC)    
-        # path = "src/benchmark/log"
-        # if os.path.isdir(path):
-        #     shutil.rmtree(path)
         cursor_on = subprocess.check_call("tput cvvis", shell=True)  
