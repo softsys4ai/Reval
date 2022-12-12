@@ -1,7 +1,7 @@
 ![visitor badge](https://visitor-badge.glitch.me/badge?page_id=abirhossen786.486687358-badge)
 
 # Reval
-Reval is an open-source framework to evaluate the performance of Robotics platforms. Currently it only supports [Husky platform](https://clearpathrobotics.com/husky-unmanned-ground-vehicle-robot/). The useres can evalute the performance of a mission for a given gazebo envirnoment (or on their own gazebo envirnment) for different configurations in an automated fashion and log the results. Reveal records the [rosbag](http://wiki.ros.org/rosbag) and evalutes all ros topics from the rosbag file. In addition, Reval supports the following metrics to evaluate the quality of a mission:
+Reval is an open-source framework to evaluate the performance of Robotics platforms. Currently it supports [Husky platform](https://clearpathrobotics.com/husky-unmanned-ground-vehicle-robot/), [Turtblebot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/). The useres can evalute the performance of a mission for a given gazebo envirnoment (or on their own gazebo envirnment) for different configurations in an automated fashion and log the results. In addition, Reval supports the following metrics to evaluate the quality of a mission:
 
 **Evaluation metrics**
 Metrics         |    Description    |
@@ -25,8 +25,7 @@ Col            | number of collisions in a mission
 MT             | time taken to complete a mission
 MS             | mission success. Example: if the robot successfully reached point A to B
 
-
-Reval supports both the [Husky simulator](https://www.clearpathrobotics.com/assets/guides/melodic/husky/SimulatingHusky.html) and Hysky physical robot. The instructions provided below are for Husky simulator. To run Reval on the physical Husky, first setup your husky using [Husky UGV Tutorial](https://www.clearpathrobotics.com/assets/guides/melodic/husky/BackUpHusky.html) then follow the below instructions.
+The instructions provided below are for Turtlebot3. Follow the initial setup for [Turtlebot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/).
 
 ## Build status
 Build Type      |    Status     |
@@ -37,30 +36,27 @@ ROS noetic      | [![ROS noetic](https://img.shields.io/badge/ROS_noetic-passing
 Platform        |    Status     |
 -----------     | --------------|
 Husky UGV     | [![Husky UGV](https://img.shields.io/badge/Husky_UGV-passing-success)](https://www.clearpathrobotics.com/assets/guides/noetic/husky/SimulatingHusky.html)
-TurtleBot3      | [![TurtleBot3](https://img.shields.io/badge/TurtleBot3-coming_soon-ff69b4)](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/)
+TurtleBot3      | [![TurtleBot3](https://img.shields.io/badge/TurtleBot3-passing-success)](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/)
 OceanWATERS     | [![OW](https://img.shields.io/badge/OceanWATERS-coming_soon-ff69b4)](https://github.com/nasa/ow_simulator)
 
 
 
 ## Requirements
-* Ubuntu 18 or Ubuntu 20
-* [ROS Melodic](http://wiki.ros.org/melodic/Installation/Ubuntu) or [ROS Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu) 
-* Python 2.7 (for ROS Melodic), Python 3.6+ (for ROS Noetic)
+* Ubuntu 20
+* [ROS Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu) 
+* Python 3.6+
 
 ## Installations
-### Installing the [husky simulator](https://www.clearpathrobotics.com/assets/guides/melodic/husky/SimulatingHusky.html)
-For ROS Melodic
 ```sh
-sudo apt-get install ros-melodic-husky-simulator
-sudo apt-get install ros-melodic-husky-navigation
-sudo apt-get install ros-melodic-husky-desktop
-```
-
-For ROS Noetic
-```sh
-sudo apt-get install ros-noetic-husky-simulator
-sudo apt-get install ros-noetic-husky-navigation
-sudo apt-get install ros-noetic-husky-desktop
+sudo apt remove ros-noetic-dynamixel-sdk
+sudo apt remove ros-noetic-turtlebot3-msgs
+sudo apt remove ros-noetic-turtlebot3
+git clone -b turtlebot3 https://github.com/softsys4ai/Reval.git
+mkdir -p ~/Reval/src/turtlebot3
+git clone -b noetic-devel https://github.com/ROBOTIS-GIT/DynamixelSDK.git
+git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
+git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3.git
+cd ~/Reval && catkin build
 ```
 
 ### Installing [rosbag](http://wiki.ros.org/rosbag) for Python
@@ -92,10 +88,6 @@ Re-source your `~/.bahsrc` file
 source ~/.bashrc
 ```
 ## Install dependencies
-Clone the repo
-```sh
-git clone https://github.com/softsys4ai/Reval.git
-```
 Installing the dependencies
 ```sh
 sudo apt install ripgrep
@@ -104,27 +96,6 @@ pip install tqdm
 pip install tabulate 
 ```
 Or `cd Reval/` run `./requirements.sh`. If you face permission denied, first run `chmod +x requirements.sh` 
-
-## Building Reval
-Source your ROS setup.sh file
-```sh
-source /opt/ros/<ros distro>/setup.bash
-```
-
-Run `catkin build` on the `Reval root` directory
-```sh
-cd Reval/
-```
-```sh
-catkin build
-```
-N.b. If you face `Catkin command not found`, install `sudo apt-get install python3-catkin-tools` OR you can use `catkin_make`
-
-If everything is correct, you should see something similar to the following output
-
-<!-- ![catkin_build](https://user-images.githubusercontent.com/73362969/165857662-dd52c4d0-8a00-45f3-bdfc-1ceb9c9bde62.jpg) -->
-![Catkin build](https://user-images.githubusercontent.com/73362969/167683326-92265a48-f735-4cd1-a44e-db4c67535629.gif)
-
 
 
 ## Running Reval
@@ -140,34 +111,14 @@ To evaluate the mission run
 python reval.py
 ```
 
-```
-optional arguments:
-  -h, --help    show this help message and exit
-  -v , -viz     turn on/off visualization of gazebo and rviz (default: On)
-  -e , -epoch   number of data-points to be recorded (default: 1)
-```
-examaple: `python reval.py -v off -e 10` 
+## Demo
+https://user-images.githubusercontent.com/73362969/206578791-1d3d5b52-10c3-4271-aded-67ce19be1f08.mp4
 
-### Demo
-Visualization off:
-<p align="center">
-  <img src= "https://user-images.githubusercontent.com/73362969/167681739-5e100673-4bdd-4988-9da1-894abf29cf3e.gif"
-</p>
+https://user-images.githubusercontent.com/73362969/206736365-6e5f7486-bd51-42f0-b39f-656d039a13cb.mov
 
-<!-- <p align="center">
-  <img src= "https://user-images.githubusercontent.com/73362969/167279446-c1727093-1c2f-4f3f-92a2-40ecee5de599.png"
-</p> -->
-
-Visualization on:
-<p align="center">
-  <img src= "https://user-images.githubusercontent.com/73362969/167684493-9181c890-4ec4-4503-8dc1-ba59fffc19e4.gif"
-</p>  
-
-<!-- https://user-images.githubusercontent.com/73362969/167276835-6f514a3a-c7ce-45b9-b9fd-ad6223582792.mp4 -->
 
 ## Customizations
 - To define your custom configuration options: [Set Configuration](/src/benchmark/README.md#cahnging-configuration-options)
-- To use your own custom gazebo environment: [Use custom gazebo environment](/src/benchmark/README.md#custom-gazebo-environment)
 - To change the goal locations: [Update Goal location](/src/benchmark/README.md#define-mission-specifications)
 
 
