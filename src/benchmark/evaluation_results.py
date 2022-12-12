@@ -72,7 +72,7 @@ error_rotating = 'msg: "Error when rotating'
 success = 'msg: "Goal reached'
 
 # battery percentage post-processing
-skip_word_bp = "battery: "
+skip_word_bp = "percentage: "
  
 # opening a text file
 DWA_failed = open("log/DWA_failed.txt", "r")
@@ -122,12 +122,11 @@ read_traveled_distance = traveled_distance.read()
 read_mission_time = mission_time.read()
 
 # battery
-voltage_min = 11.1
-voltage_max = 12.2
 first_line = bat_percentage.readline().strip()
-volatge = first_line.replace(skip_word_bp, '')
-volatge = float(volatge)
-battery_percentage = round(((volatge - voltage_min) / (voltage_max - voltage_min)) * 100, 2)
+battery_percentage = first_line.replace(skip_word_bp, '')
+battery_percentage = float(battery_percentage)
+battery_percentage = round(battery_percentage, 2)
+
 
 # determining mission success
 total_mission_success  = read_mission_success.count(success)

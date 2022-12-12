@@ -11,6 +11,25 @@ footprint_padding_g = round(random.uniform(0.01, 0.05),2) # Amount to pad footpr
 combination_method_g = random.randint(0,1) # # Changes the behaviour how the obstacle_layer handles incoming data from layers beyond it. Possible values are "Overwrite" (0), "Maximum" (1) and "Nothing" (99).
 ```
 
+## Custom gazebo environment
+You can use any gazebo environment. To use your own gazebo environment you have to place your `<your_env_name>.map` file to `cd Reval/src/husky_ws/src/husky/husky_gazebo/worlds/` folder. And update the launch file located at `cd Reval/src/husky_ws/src/husky/husky_gazebo/launch/playpen.launch`
+Currently we do not support automatic generated environment, which will be in your future release.
+```launch
+<launch>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    # Update Scenario1.world to your world file name
+    <arg name="world_name" value="$(find husky_gazebo)/worlds/Scenario1.world"/>
+    
+    # Do not change
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+</launch>
+```
+
 ## Define mission specifications
 To define target locations update the coordinates in the `goals.py` file. It is important to define the `narrow_spaces` for your custom gazebo environment to get the `RNS` metric value. Currently the RNS metric only supports maximum 5 target locations, we plan to add more flexibility in our future release.
 ```python

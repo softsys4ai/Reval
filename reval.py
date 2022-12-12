@@ -6,6 +6,7 @@ import time
 from turtle import bgcolor
 from tqdm import tqdm
 from utils.utils import bcolors, Loader, description, KeyboardInterrupt
+from utils.arg_parse import command
 
 
 if not os.path.exists('src/benchmark/log'):
@@ -13,11 +14,11 @@ if not os.path.exists('src/benchmark/log'):
 
 color = 'white'
 ASCII = '.#'
-
+loading = False
 def reval():
-    global loading
-    loading = False
-    # set_config = subprocess.check_call("python set_config.py '%s'", cwd="src/benchmark/", shell=True)
+    
+    battery = subprocess.check_call("gnome-terminal -- python battery_consumer.py '%s'", cwd="src/reval_turtlebot3/src", shell=True)
+    set_config = subprocess.check_call("python set_config.py '%s'", cwd="src/benchmark/", shell=True)
     for i in tqdm(range(5),  desc="Set config method=random", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}', leave=False): 
         time.sleep(1)
 
@@ -59,10 +60,15 @@ if __name__== '__main__':
         signal.signal(signal.SIGINT, KeyboardInterrupt.signal_handler)
         cursor_off = subprocess.check_call("tput civis", shell=True)
 
-        turtlebot_nav = subprocess.check_call("./turtlebot3_nav.sh '%s'", cwd="src/benchmark/service", shell=True)
-        for i in tqdm(range(3),  desc="Launching Turtlebot3 navigation", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}', leave=False): 
-            time.sleep(1)                  
-        reval()
+        for i in tqdm(range(command.args.e), colour="green", desc="Epoch", bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'):
+            turtlebot_gazebo = subprocess.check_call("./turtlebot3_gazebo.sh '%s'", cwd="src/benchmark/service", shell=True)
+            for i in tqdm(range(8), desc="Launching turtlebot3_gazebo", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}', leave=False):
+                time.sleep(1)
+            turtlebot_nav = subprocess.check_call("./turtlebot3_move_base.sh '%s'", cwd="src/benchmark/service", shell=True)
+            for i in tqdm(range(3),  desc="Launching turtlebot3_MobeBase", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}', leave=False): 
+                time.sleep(1)               
+            reval()
+            time.sleep(5) 
         cursor_on = subprocess.check_call("tput cvvis", shell=True)
 
 
