@@ -17,7 +17,7 @@ ASCII = '.#'
 def reval():
     global loading
     loading = False
-    # set_config = subprocess.check_call("python set_config.py '%s'", cwd="src/benchmark/", shell=True)
+    set_config = subprocess.check_call("python set_config.py '%s'", cwd="src/benchmark/", shell=True)
     for i in tqdm(range(5),  desc="Set config method=random", colour=color, ascii=ASCII, bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}', leave=False): 
         time.sleep(1)
 
